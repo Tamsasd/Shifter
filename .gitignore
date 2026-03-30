@@ -98,6 +98,9 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
+# Custom stuff:
 /[Aa]ssets/Fries*
 /[Aa]ssets/ithappy
 /[Aa]ssets/ithappy.meta
+/[Aa]ssets/Pandazole_Lowpoly_Asset_Bundle
+/[Aa]ssets/Pandazole_Lowpoly_Asset_Bundle.meta
