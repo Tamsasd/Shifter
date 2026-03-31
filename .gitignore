@@ -105,3 +105,6 @@ InitTestScene*.unity*
 # Ignore the Outline Addon files locally
 Packages/dev.ameye.linework-lite/
 Packages/dev.ameye.linework-lite.meta
+
+# Ignore Pandazole - Lowpoly Asset Bundle
+/[Aa]ssets/Pandazole*
