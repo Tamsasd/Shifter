@@ -101,3 +101,7 @@ InitTestScene*.unity*
 /[Aa]ssets/Fries*
 /[Aa]ssets/ithappy
 /[Aa]ssets/ithappy.meta
+
+# Ignore the Outline Addon files locally
+Packages/dev.ameye.linework-lite/
+Packages/dev.ameye.linework-lite.meta
