@@ -6,6 +6,7 @@ public abstract class Character : MonoBehaviour
 {
     public abstract Vector3 GetCameraOffset();
     public abstract void ToggleControl(bool value);
+    public abstract bool HasControl();
 
     [SerializeField] public Vector3 cameraOffset;
     public bool inControl = false;

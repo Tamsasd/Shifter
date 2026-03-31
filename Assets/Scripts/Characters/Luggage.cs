@@ -53,4 +53,9 @@ public class Luggage : Character
         inControl = value;
         dm.ToggleControl(value);
     }
+
+    public override bool HasControl()
+    {
+        return inControl;
+    }
 }

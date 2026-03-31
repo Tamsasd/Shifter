@@ -60,4 +60,9 @@ public class Mirror : Character
     {
         inControl = value;
     }
+
+    public override bool HasControl()
+    {
+        return inControl;
+    }
 }

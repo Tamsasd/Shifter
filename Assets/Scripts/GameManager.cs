@@ -25,4 +25,11 @@ public class GameManager : MonoBehaviour
     {
         return controlledObject;
     }
+
+    public void setControlledObject(Character controlledObject)
+    {
+        this.controlledObject.ToggleControl(false);
+        this.controlledObject = controlledObject;
+        this.controlledObject.ToggleControl(true);
+    }
 }

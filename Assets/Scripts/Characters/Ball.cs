@@ -66,4 +66,9 @@ public class Ball : Character
 
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
     }
+
+    public override bool HasControl()
+    {
+        return inControl;
+    }
 }
