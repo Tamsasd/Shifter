@@ -8,10 +8,10 @@ public abstract class Character : MonoBehaviour
     public abstract void ToggleControl(bool value);
     public abstract bool HasControl();
 
-    [SerializeField] public Vector3 cameraOffset;
-    public bool inControl = false;
+    [SerializeField] protected Vector3 cameraOffset;
+    protected bool inControl = false;
 
-    public float moveX;
-    public float moveZ;
+    protected float moveX;
+    protected float moveZ;
 
 }
