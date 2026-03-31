@@ -1,41 +1,69 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Ball : MonoBehaviour
+public class Ball : Character
 {
-    public Transform rootTransform;
-    private Vector3 lastPosition;
-    private float radius;
+    private Rigidbody rb;
+    public float speed = 1.0f;
+    private Transform cameraTransform;
+
+    public override Vector3 GetCameraOffset()
+    {
+        return cameraOffset;
+    }
+
+    public override void ToggleControl(bool value)
+    {
+        inControl = value;
+    }
 
     void Start()
     {
-        SphereCollider sphere = rootTransform.GetComponent<SphereCollider>();
+        rb = GetComponent<Rigidbody>();
 
-        if (sphere != null)
-        {
-            radius = sphere.radius * rootTransform.lossyScale.x;
-        }
-        else
-        {
-            radius = GetComponent<Renderer>().bounds.extents.y;
-        }
-
-        lastPosition = rootTransform.position;
+        cameraTransform = GameObject.Find("CameraWithPivot").transform;
     }
 
     void Update()
     {
-        Vector3 distanceMoved = rootTransform.position - lastPosition;
-        float distance = distanceMoved.magnitude;
-
-        if (distance > 0.001f)
+        if (inControl)
         {
-            Vector3 rotationAxis = Vector3.Cross(Vector3.up, distanceMoved).normalized;
-
-            float rotationAngle = (distance / (2 * Mathf.PI * radius)) * 360f;
-
-            transform.Rotate(rotationAxis, rotationAngle, Space.World);
+            SetMoveAxis();
         }
+    }
 
-        lastPosition = rootTransform.position;
+    void SetMoveAxis()
+    {
+        moveX = Input.GetAxisRaw("Horizontal");
+        moveZ = Input.GetAxisRaw("Vertical");
+    }
+
+    private void FixedUpdate()
+    {
+        if (inControl)
+        {
+            Move();
+        }
+    }
+    void Move()
+    {
+        Vector3 forward = cameraTransform.forward;
+        Vector3 right = cameraTransform.right;
+
+        forward.y = 0;
+        right.y = 0;
+        forward.Normalize();
+        right.Normalize();
+
+        Vector3 moveDirection = (forward * moveZ + right * moveX).normalized;
+
+        Vector3 targetVelocity = moveDirection * speed;
+
+        Vector3 velocityChange = targetVelocity - rb.velocity;
+
+        velocityChange.y = 0;
+
+        rb.AddForce(velocityChange, ForceMode.VelocityChange);
     }
 }

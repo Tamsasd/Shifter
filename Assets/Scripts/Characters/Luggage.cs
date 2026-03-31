@@ -8,8 +8,6 @@ public class Luggage : Character
 
     public float wheelPivotSpeed = 10f;
 
-    [SerializeField] private Vector3 cameraOffset;
-
     void Start()
     {
         foreach (Transform t in transform)
@@ -24,6 +22,13 @@ public class Luggage : Character
     }
 
     void Update()
+    {
+        if (inControl)
+        {
+            TurnWheels();
+        }
+    }
+    void TurnWheels()
     {
         Vector3 moveDir = dm.GetMoveDirection();
 
@@ -41,5 +46,11 @@ public class Luggage : Character
     public override Vector3 GetCameraOffset()
     {
         return cameraOffset;
+    }
+
+    public override void ToggleControl(bool value)
+    {
+        inControl = value;
+        dm.ToggleControl(value);
     }
 }

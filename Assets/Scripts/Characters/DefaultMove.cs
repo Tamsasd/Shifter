@@ -7,12 +7,14 @@ public class DefaultMove : MonoBehaviour
     public float Speed = 5f;
     public float rotationSpeed = 100f;
 
-    public Transform cameraTransform;
+    private Transform cameraTransform;
 
     private float moveX;
     private float moveZ;
 
     private Vector3 moveDirection = Vector3.zero;
+
+    private bool inControl = false;
 
     void Start()
     {
@@ -22,14 +24,28 @@ public class DefaultMove : MonoBehaviour
 
         cameraTransform = GameObject.Find("CameraWithPivot").transform;
     }
+    private void Update()
+    {
+        SetMoveAxis();
+    }
 
-    void Update()
+    private void FixedUpdate()
+    {
+        if (inControl)
+        {
+            Move();
+            Turn();
+        }
+    }
+
+    void SetMoveAxis()
     {
         moveX = Input.GetAxisRaw("Horizontal");
         moveZ = Input.GetAxisRaw("Vertical");
     }
 
-    void FixedUpdate()
+
+    public void Turn()
     {
         if (Input.GetKey(KeyCode.Q))
         {
@@ -39,7 +55,10 @@ public class DefaultMove : MonoBehaviour
         {
             transform.Rotate(Vector3.up, rotationSpeed * Time.fixedDeltaTime);
         }
+    }
 
+    public void Move()
+    {
         Vector3 forward = cameraTransform.forward;
         Vector3 right = cameraTransform.right;
 
@@ -58,5 +77,10 @@ public class DefaultMove : MonoBehaviour
     public Vector3 GetMoveDirection()
     {
         return moveDirection;
+    }
+
+    public void ToggleControl(bool value)
+    {
+        inControl = value;
     }
 }
