@@ -31,12 +31,6 @@ public class Mirror : Character
 
     void FixedUpdate()
     {
-        Vector3 localRot = transform.localEulerAngles;
-
-        localRot.x = 0;
-
-        transform.localRotation = Quaternion.Euler(localRot);
-
         if (inControl)
         {
             Move();

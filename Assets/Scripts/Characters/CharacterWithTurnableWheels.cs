@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Luggage : Character
+public class CharacterWithTurnableWheels : Character
 {
-    public List<Transform> wheels = new List<Transform>();
+    public List<Transform> wheels = new();
     private DefaultMove dm;
 
     public float wheelPivotSpeed = 10f;
@@ -11,8 +11,8 @@ public class Luggage : Character
     void Start()
     {
         foreach (Transform t in transform)
-        {
-            if (t.name.ToLower().StartsWith("wheel"))
+        {            
+            if (t.CompareTag("Wheel"))
             {
                 wheels.Add(t);
             }           
