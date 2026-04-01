@@ -22,7 +22,7 @@ public abstract class AbstractMove : MonoBehaviour
     [SerializeField] protected bool canTurn = true;
     [SerializeField] protected bool canMove = true;
 
-    void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
 
@@ -30,7 +30,7 @@ public abstract class AbstractMove : MonoBehaviour
 
         cameraTransform = GameObject.Find("CameraWithPivot").transform;
     }
-    private void Update()
+    protected virtual void Update()
     {
         SetMoveAxis();
     }

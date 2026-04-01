@@ -23,5 +23,4 @@ public abstract class Character : MonoBehaviour
 
     protected float moveX;
     protected float moveZ;
-
 }
