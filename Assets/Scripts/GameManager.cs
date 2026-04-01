@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +13,11 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        if (controlledObject == null)
+        {
+            Debug.LogError("Starting controlled object is not set.");
+            return;
+        }
         controlledObject.ToggleControl(true);
     }
 
