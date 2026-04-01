@@ -10,13 +10,26 @@ public class JetpackMovement : AbstractMove
     [SerializeField] private float pivotSpeed = 10.0f;
     [SerializeField] private float tiltAngle = 30.0f;
     [SerializeField] private LayerMask playerMask;
+    [SerializeField] private ParticleSystem foamParticleSystem;
     private bool isPressingFly = false;
+
+    protected override void Start()
+    {
+        base.Start();
+        var emission = foamParticleSystem.emission;
+        emission.enabled = false;
+    }
 
     protected override void Move()
     {
         if (isPressingFly)
         {
             Fly();
+        }
+        else
+        {
+            var emission = foamParticleSystem.emission;
+            emission.enabled = false;
         }
 
         if (IsGrounded()) return;
@@ -55,6 +68,14 @@ public class JetpackMovement : AbstractMove
     private void Fly()
     {
         rb.AddForce(transform.up * flyForce);
+
+        var emission = foamParticleSystem.emission;
+        emission.enabled = true;
+
+        if (!foamParticleSystem.isPlaying)
+        {
+            foamParticleSystem.Play();
+        }
     }
 
     protected override void Turn()

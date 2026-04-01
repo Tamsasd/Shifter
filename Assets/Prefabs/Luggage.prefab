@@ -83,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 2249112782290787583}
+  character: {fileID: 0}
   pivotSpeed: 10
 --- !u!1001 &3479681920182136866
 PrefabInstance:
@@ -406,6 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 2249112782290787583}
+  character: {fileID: 0}
   pivotSpeed: 10
 --- !u!1001 &6852674345031492579
 PrefabInstance:
@@ -485,6 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 2249112782290787583}
+  character: {fileID: 0}
   pivotSpeed: 10
 --- !u!4 &8095631173109487970 stripped
 Transform:
@@ -569,6 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 2249112782290787583}
+  character: {fileID: 0}
   pivotSpeed: 10
 --- !u!4 &5113889819105945764 stripped
 Transform:
