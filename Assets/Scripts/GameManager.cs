@@ -1,16 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject controlledObject;
+    public Character controlledObject;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (controlledObject == null)
+        {
+            Debug.LogError("Starting controlled object is not set.");
+            return;
+        }
+        controlledObject.ToggleControl(true);
     }
 
     // Update is called once per frame
@@ -19,8 +27,15 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public GameObject GetControlledObject()
+    public Character GetControlledObject()
     {
         return controlledObject;
+    }
+
+    public void setControlledObject(Character controlledObject)
+    {
+        this.controlledObject.ToggleControl(false);
+        this.controlledObject = controlledObject;
+        this.controlledObject.ToggleControl(true);
     }
 }
