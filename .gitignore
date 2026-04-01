@@ -98,6 +98,7 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
+# Custom stuff:
 /[Aa]ssets/Fries*
 /[Aa]ssets/ithappy
 /[Aa]ssets/ithappy.meta
@@ -108,3 +109,7 @@ Packages/dev.ameye.linework-lite.meta
 
 # Ignore Pandazole - Lowpoly Asset Bundle
 /[Aa]ssets/Pandazole*
+/[Aa]ssets/Pandazole_Lowpoly_Asset_Bundle
+/[Aa]ssets/Pandazole_Lowpoly_Asset_Bundle.meta
+/[Aa]ssets/UI Icons - 3D Low Poly Style
+/[Aa]ssets/UI Icons - 3D Low Poly Style.meta
