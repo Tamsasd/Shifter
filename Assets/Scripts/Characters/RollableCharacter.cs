@@ -50,11 +50,6 @@ public class RollableCharacter : Character
         }
     }
 
-    private void Update()
-    {
-
-    }
-
     private void FixedUpdate()
     {
         rollableTransform.Rotate(rotationUnitVector, getRotationAngle(), Space.Self);
@@ -67,8 +62,4 @@ public class RollableCharacter : Character
         float deg = (180 * s) / (radius * math.PI);
         return deg;
     }
-
-
-
-
 }
