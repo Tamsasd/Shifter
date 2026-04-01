@@ -18,9 +18,8 @@ public class CameraController : MonoBehaviour
     {
 
         Character controlledCharacter = gameManager.GetControlledObject().GetComponent<Character>();
-        Vector3 cameraOffset = controlledCharacter.GetCameraOffset();
 
-        transform.position = controlledCharacter.transform.position + cameraOffset;
+        transform.position = controlledCharacter.GetCameraPivot().position;
 
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

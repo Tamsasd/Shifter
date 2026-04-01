@@ -4,9 +4,13 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    public Vector3 GetCameraOffset()
+    public Transform GetCameraPivot()
     {
-        return cameraOffset;
+        if (cameraPivot == null)
+        {
+            cameraPivot = transform;
+        }
+        return cameraPivot;
     }
     public virtual void ToggleControl(bool value)
     {
@@ -18,7 +22,7 @@ public abstract class Character : MonoBehaviour
         return inControl;
     }
 
-    [SerializeField] protected Vector3 cameraOffset;
+    [SerializeField] protected Transform cameraPivot;
     protected bool inControl = false;
 
     protected float moveX;
