@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5851447311329432637}
   - component: {fileID: 2355201068758745182}
   - component: {fileID: 3467581146876034540}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fire Extinguisher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3168513024595230871}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 199368254142969422}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &2355201068758745182
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -95,7 +95,13 @@ GameObject:
   m_Component:
   - component: {fileID: 199368254142969422}
   - component: {fileID: 11962074766188810}
-  m_Layer: 0
+  - component: {fileID: 958866776285657012}
+  - component: {fileID: 3615567819640956489}
+  - component: {fileID: 7930197891395021614}
+  - component: {fileID: 383823124540949264}
+  - component: {fileID: 5462436841245494313}
+  - component: {fileID: 279126286059996939}
+  m_Layer: 3
   m_Name: Fire Extinguisher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,3 +145,114 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.30105117, y: 0.6103092, z: 0.23521335}
   m_Center: {x: 0.0068193823, y: 0.30475542, z: -0.0037714317}
+--- !u!114 &958866776285657012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355575413104919794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7b7f1c683a10941ae23423368bd467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeRotation: 1
+  canTurn: 0
+  canMove: 1
+  sphereRadius: 0.3
+  flyForce: 20
+  pivotSpeed: 10
+  tiltAngle: 30
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!54 &3615567819640956489
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355575413104919794}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7930197891395021614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355575413104919794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4aa03593650c144895585747e7dac65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &383823124540949264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355575413104919794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: {fileID: 0}
+  character: {fileID: 0}
+  pivotSpeed: 10
+--- !u!114 &5462436841245494313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355575413104919794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe60440401cfec40982c303ff8dc709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineLayerIndex: 1
+--- !u!65 &279126286059996939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355575413104919794}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0.32327843, z: 0.017818332}
