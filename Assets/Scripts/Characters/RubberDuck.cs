@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class RubberDuck : Character
 {
-    public AudioSource source;
-    public AudioClip clip;
     private Animator animator;
 
     // Start is called before the first frame update
@@ -32,7 +30,7 @@ public class RubberDuck : Character
 
             if (shouldPlay)
             {
-                source.PlayOneShot(clip);
+                audioSource.PlayOneShot(audioClip);
                 animator.SetTrigger("RubberDuck1");
             }
             else
