@@ -287,8 +287,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraOffset: {x: 0, y: 1, z: -0.2}
-  wheels: []
-  wheelPivotSpeed: 10
 --- !u!114 &4765612254744684039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,8 +299,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  rotationSpeed: 100
+  freezeRotation: 1
+  canTurn: 1
+  canMove: 1
 --- !u!114 &5403343562757642143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,8 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOffset: {x: 0, y: 0, z: 0}
-  dm: {fileID: 4765612254744684039}
+  move: {fileID: 4765612254744684039}
   pivotSpeed: 10
 --- !u!1001 &2696478790137755212
 PrefabInstance:
@@ -526,8 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOffset: {x: 0, y: 0, z: 0}
-  dm: {fileID: 4765612254744684039}
+  move: {fileID: 4765612254744684039}
   pivotSpeed: 10
 --- !u!4 &4390125308583622654 stripped
 Transform:
@@ -616,8 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOffset: {x: 0, y: 0, z: 0}
-  dm: {fileID: 4765612254744684039}
+  move: {fileID: 4765612254744684039}
   pivotSpeed: 10
 --- !u!1001 &8443614063461155383
 PrefabInstance:
@@ -696,8 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOffset: {x: 0, y: 0, z: 0}
-  dm: {fileID: 4765612254744684039}
+  move: {fileID: 4765612254744684039}
   pivotSpeed: 10
 --- !u!4 &7830269742849278853 stripped
 Transform:
