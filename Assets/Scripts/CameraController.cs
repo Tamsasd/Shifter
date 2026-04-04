@@ -4,7 +4,8 @@ public class CameraController : MonoBehaviour
 {
     GameManager gameManager;
 
-    public float mouseSensitivity = 100f;
+    private float panSens;
+    private float zoomSens;
 
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -12,6 +13,9 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        panSens = PlayerPrefs.GetFloat("PanSensitivity", 100.0f);
+        zoomSens = PlayerPrefs.GetFloat("ZoomSensitivity", 100.0f);
     }
 
     void Update()
@@ -21,8 +25,8 @@ public class CameraController : MonoBehaviour
 
         transform.position = controlledCharacter.GetCameraPivot().position;
 
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * panSens * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * panSens * Time.deltaTime;
 
         yRotation += mouseX;
         xRotation -= mouseY;
