@@ -13,8 +13,6 @@ public abstract class AbstractMove : MonoBehaviour
     protected float moveX;
     protected float moveZ;
 
-    protected Vector3 moveDirection = Vector3.zero;
-
     protected bool inControl = false;
 
 
@@ -61,7 +59,15 @@ public abstract class AbstractMove : MonoBehaviour
 
     public Vector3 GetMoveDirection()
     {
-        return moveDirection;
+        Vector3 forward = cameraTransform.forward;
+        Vector3 right = cameraTransform.right;
+
+        forward.y = 0;
+        right.y = 0;
+        forward.Normalize();
+        right.Normalize();
+
+        return (forward * moveZ + right * moveX).normalized;
     }
 
     public void ToggleControl(bool value)

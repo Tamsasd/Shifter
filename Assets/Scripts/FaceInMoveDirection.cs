@@ -3,26 +3,35 @@ using UnityEngine;
 
 public class FaceInMoveDirection : MonoBehaviour
 {
-    [SerializeField] private DefaultMove dm;
+    [SerializeField] private AbstractMove move;
+    [SerializeField] private Character character;
 
     public float pivotSpeed = 10f;
 
     void Start()
     {
-        if (dm == null)
+        if (move == null)
         {
-            dm = GetComponent<DefaultMove>();
+            move = GetComponent<AbstractMove>();
         }
+        if (character == null)
+        {
+            character = move.GetComponent<Character>();
+        }
+        
     }
 
     void Update()
     {
-        Turn();
+        if (character.HasControl())
+        {
+            Turn();
+        }
     }
 
     void Turn()
     {
-        Vector3 moveDir = dm.GetMoveDirection();
+        Vector3 moveDir = move.GetMoveDirection();
 
         if (moveDir.sqrMagnitude > 0.01f)
         {
