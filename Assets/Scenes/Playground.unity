@@ -318,6 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1312575572}
   - component: {fileID: 1312575571}
+  - component: {fileID: 1312575573}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -347,12 +348,44 @@ Transform:
   m_GameObject: {fileID: 1312575570}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -384.59564, y: -222.20833, z: 116.77987}
+  m_LocalPosition: {x: -384.59564, y: -216.95, z: 116.77987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1312575573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312575570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2057417c9b217a64d9910bd2b593885a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 439979244}
+--- !u!1 &1347116254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5307175763448108912, guid: 80c569e22ff3cb74f90475ebd03b7455, type: 3}
+  m_PrefabInstance: {fileID: 1735720895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1347116256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347116254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dm: {fileID: 1175085008}
+  pivotSpeed: 10
 --- !u!1001 &1416050684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1515,10 +1548,4 @@ SceneRoots:
   - {fileID: 1593041103}
   - {fileID: 228283340274475091}
   - {fileID: 431498661322294629}
-  - {fileID: 1061001558}
-  - {fileID: 198810247577439623}
-  - {fileID: 7407053699736453405}
-  - {fileID: 7251875713052442909}
-  - {fileID: 2577133786362740132}
-  - {fileID: 3304949718863861204}
-  - {fileID: 1741970665}
+  - {fileID: 1787713951}
