@@ -551,11 +551,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7720250181187551748, guid: 07fd536fc5b2244449c198fb2f4f615e, type: 3}
+      propertyPath: maxZoomZ
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720250181187551748, guid: 07fd536fc5b2244449c198fb2f4f615e, type: 3}
+      propertyPath: minZoomZ
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720250181187551748, guid: 07fd536fc5b2244449c198fb2f4f615e, type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 1471316475}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07fd536fc5b2244449c198fb2f4f615e, type: 3}
+--- !u!4 &1471316475 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 788304750916504911, guid: 07fd536fc5b2244449c198fb2f4f615e, type: 3}
+  m_PrefabInstance: {fileID: 1416050684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1593041100
 GameObject:
   m_ObjectHideFlags: 0
