@@ -10,9 +10,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
         if (controlledObject == null)
         {
             Debug.LogError("Starting controlled object is not set.");
@@ -25,6 +22,13 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void setCursorLock(bool isLocked)
+    {
+
+        Cursor.lockState = isLocked ? CursorLockMode.Locked : CursorLockMode.Confined;
+        Cursor.visible = !isLocked; // giga
     }
 
     public Character GetControlledObject()
