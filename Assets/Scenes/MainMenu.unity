@@ -977,7 +977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shiter
+  m_text: Shifter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41dbe04c659dec342b6500b44b04d1d4, type: 2}
   m_sharedMaterial: {fileID: -4294369409899254885, guid: 41dbe04c659dec342b6500b44b04d1d4, type: 2}
