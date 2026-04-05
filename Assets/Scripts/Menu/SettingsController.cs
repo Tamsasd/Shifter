@@ -4,80 +4,45 @@ using UnityEngine.Audio;
 
 public class SettingsController : MonoBehaviour
 {
-    [Header("Audio Settings")]
     public AudioMixer mainAudioMixer;
-    public Slider masterSlider;
-    public Slider musicSlider;
-    public Slider sfxSlider;
-
-    [Header("Camera Settings")]
-    public Slider panSlider;
-    public Slider zoomSlider;
+    public Slider masterSlider, musicSlider, sfxSlider, panSlider, zoomSlider;
 
     void Start()
     {
-        // Load saved values or set the default values
-        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.75f);
-        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
-        sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 0.75f);
+        float mVol = PlayerPrefs.GetFloat("MasterVolume", 0.75f); // default values back here
+        float muVol = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
+        float sVol = PlayerPrefs.GetFloat("SFXVolume", 0.75f);
+        float pSens = PlayerPrefs.GetFloat("PanSensitivity", 2000f);
+        float zSens = PlayerPrefs.GetFloat("ZoomSensitivity", 3f);
 
-        panSlider.value = PlayerPrefs.GetFloat("PanSensitivity", 2000f);
-        zoomSlider.value = PlayerPrefs.GetFloat("ZoomSensitivity", 3f);
+        masterSlider.value = mVol;
+        musicSlider.value = muVol;
+        sfxSlider.value = sVol;
+        panSlider.value = pSens;
+        zoomSlider.value = zSens;
 
-        // Add listeners
+        // Apply to Mixer
+        SetMasterVolume(mVol);
+        SetMusicVolume(muVol);
+        SetSFXVolume(sVol);
+
         masterSlider.onValueChanged.AddListener(SetMasterVolume);
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
-
         panSlider.onValueChanged.AddListener(SetPanSensitivity);
         zoomSlider.onValueChanged.AddListener(SetZoomSensitivity);
-
-        // Just to make the defaults work visually when the user opens settings for the first time
-        // There is definitely a prettier way to do this but oh well
-        float savedVol = PlayerPrefs.GetFloat("MasterVolume", 0.75f);
-        float savedmusic = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
-        float savedSFX = PlayerPrefs.GetFloat("SFXVolume", 0.75f);
-        float savedPan = PlayerPrefs.GetFloat("PanSensitivity", 2000f);
-        float savedZoom = PlayerPrefs.GetFloat("ZoomSensitivity", 3f);
-        masterSlider.value = savedVol;
-        musicSlider.value = savedmusic;
-        sfxSlider.value = savedSFX;
-        panSlider.value = savedPan;
-        zoomSlider.value = savedZoom;
-        SetMasterVolume(savedVol);
-        SetMusicVolume(savedmusic);
-        SetSFXVolume(savedSFX);
-        SetPanSensitivity(savedPan);
-        SetZoomSensitivity(savedZoom);
     }
 
-    // Convert slider values to db
-    public void SetMasterVolume(float sliderValue)
+    public void SetMasterVolume(float val) { ApplyVol("MasterVol", "MasterVolume", val); }
+    public void SetMusicVolume(float val) { ApplyVol("MusicVol", "MusicVolume", val); }
+    public void SetSFXVolume(float val) { ApplyVol("SFXVol", "SFXVolume", val); }
+
+    private void ApplyVol(string exposedParam, string prefsKey, float val)
     {
-        mainAudioMixer.SetFloat("MasterVol", Mathf.Log10(sliderValue) * 20);
-        PlayerPrefs.SetFloat("MasterVolume", sliderValue);
+        mainAudioMixer.SetFloat(exposedParam, Mathf.Log10(val) * 20);
+        PlayerPrefs.SetFloat(prefsKey, val);
     }
 
-    public void SetMusicVolume(float sliderValue)
-    {
-        mainAudioMixer.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
-        PlayerPrefs.SetFloat("MusicVolume", sliderValue);
-    }
-
-    public void SetSFXVolume(float sliderValue)
-    {
-        mainAudioMixer.SetFloat("SFXVol", Mathf.Log10(sliderValue) * 20);
-        PlayerPrefs.SetFloat("SFXVolume", sliderValue);
-    }
-
-    // Camera stuff
-    public void SetPanSensitivity(float sliderValue)
-    {
-        PlayerPrefs.SetFloat("PanSensitivity", sliderValue);
-    }
-
-    public void SetZoomSensitivity(float sliderValue)
-    {
-        PlayerPrefs.SetFloat("ZoomSensitivity", sliderValue);
-    }
+    public void SetPanSensitivity(float val) { PlayerPrefs.SetFloat("PanSensitivity", val); }
+    public void SetZoomSensitivity(float val) { PlayerPrefs.SetFloat("ZoomSensitivity", val); }
 }

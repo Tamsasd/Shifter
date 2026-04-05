@@ -1,19 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    // Use like so: AudioManager.instance.PlaySFX(AudioManager.instance.death);
+
+    // The static reference that other scripts use
+    public static AudioManager instance;
+
     [Header("--- Audio Source ---")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
-
 
     [Header("--- Audio Clip ---")]
     public AudioClip backgroundMusic;
     public AudioClip click;
     public AudioClip death;
-    // etc...
+    public AudioClip quack;
+    public AudioClip fireExtinguisher;
+
+    private void Awake()
+    {
+        // Singleton Logic: Ensure only one AudioManager exists
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // Keep this object alive between scenes
+        }
+        else
+        {
+            Destroy(gameObject); // Destroy duplicates if we return to the Main Menu
+        }
+    }
 
     void Start()
     {
@@ -21,14 +38,8 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    // use this for all future sounds
     public void PlaySFX(AudioClip sound)
     {
         SFXSource.PlayOneShot(sound);
-    }
-
-    void Update()
-    {
-        
     }
 }

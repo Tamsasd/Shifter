@@ -1870,7 +1870,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -5713,6 +5713,8 @@ MonoBehaviour:
   backgroundMusic: {fileID: 0}
   click: {fileID: 0}
   death: {fileID: 0}
+  quack: {fileID: 8300000, guid: e972b9ce03fb2104187d02823ec8eb9a, type: 3}
+  fireExtinguisher: {fileID: 8300000, guid: ca13026e105d1ff4e87dc04bf67c7a0e, type: 3}
 --- !u!4 &1769545934
 Transform:
   m_ObjectHideFlags: 0
