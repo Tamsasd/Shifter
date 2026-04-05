@@ -977,7 +977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shiter
+  m_text: Shifter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41dbe04c659dec342b6500b44b04d1d4, type: 2}
   m_sharedMaterial: {fileID: -4294369409899254885, guid: 41dbe04c659dec342b6500b44b04d1d4, type: 2}
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2764,10 +2764,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1314240925}
   m_HandleRect: {fileID: 779132763}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 1
+  m_MaxValue: 10000
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 2000
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5226,10 +5226,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1052614675}
   m_HandleRect: {fileID: 396786623}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 0.5
+  m_MaxValue: 50
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5713,6 +5713,8 @@ MonoBehaviour:
   backgroundMusic: {fileID: 0}
   click: {fileID: 0}
   death: {fileID: 0}
+  quack: {fileID: 8300000, guid: e972b9ce03fb2104187d02823ec8eb9a, type: 3}
+  fireExtinguisher: {fileID: 8300000, guid: ca13026e105d1ff4e87dc04bf67c7a0e, type: 3}
 --- !u!4 &1769545934
 Transform:
   m_ObjectHideFlags: 0

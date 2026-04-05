@@ -30,7 +30,7 @@ public class RubberDuck : Character
 
             if (shouldPlay)
             {
-                audioSource.PlayOneShot(audioClip);
+                AudioManager.instance.PlaySFX(AudioManager.instance.quack);
                 animator.SetTrigger("RubberDuck1");
             }
             else

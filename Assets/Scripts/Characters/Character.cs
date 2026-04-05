@@ -28,6 +28,9 @@ public abstract class Character : MonoBehaviour
     {
         if (inControl && audioSource != null)
         {
+            // Ensure the local volume is full so the Mixer can do its job
+            if (audioSource.volume != 1f) audioSource.volume = 1f;
+
             bool isPressingKey = false;
             foreach (KeyCode k in keycodes)
             {
@@ -41,11 +44,7 @@ public abstract class Character : MonoBehaviour
             if (isPressingKey)
             {
                 audioSource.loop = true;
-
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.Play();
-                }
+                if (!audioSource.isPlaying) audioSource.Play();
             }
             else
             {
