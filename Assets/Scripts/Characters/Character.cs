@@ -59,4 +59,41 @@ public abstract class Character : MonoBehaviour
 
     protected float moveX;
     protected float moveZ;
+
+    [SerializeField] private int outlineLayerIndex = 1;
+    public virtual void EnableOutline()
+    {
+        List<Renderer> targetRenderers = new List<Renderer>(GetComponentsInChildren<Renderer>());
+        foreach (Renderer renderer in targetRenderers)
+        {
+            renderer.renderingLayerMask |= (1u << outlineLayerIndex);
+        }
+    }
+
+    public virtual void DisableOutline()
+    {
+        List<Renderer> targetRenderers = new List<Renderer>(GetComponentsInChildren<Renderer>());
+        foreach (Renderer renderer in targetRenderers)
+        {
+            renderer.renderingLayerMask &= ~(1u << outlineLayerIndex);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("ShiftCollider") && !inControl)
+        {
+            EnableOutline();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("ShiftCollider"))
+        {
+            DisableOutline();
+        }
+    }
+
+
 }
