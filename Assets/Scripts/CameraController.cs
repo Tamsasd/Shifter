@@ -11,12 +11,10 @@ public class CameraController : MonoBehaviour
     private float xRotation = 0f;
     private float yRotation = 0f;
 
-    public Transform cameraTransform;
+    public Transform cameraTransform;    
 
     public float minZoomZ = -10f;
     public float maxZoomZ = -1f;
-
-    [Header("Smoothing")]
     public float zoomSmoothTime = 0.15f;
     private float targetZoomZ;
     private float zoomVelocity = 0f;

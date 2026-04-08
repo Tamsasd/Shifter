@@ -902,6 +902,7 @@ GameObject:
   - component: {fileID: 2281519401169523979}
   - component: {fileID: 3868536516827324427}
   - component: {fileID: 964150349460462175}
+  - component: {fileID: 2154119352406692690}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Character
@@ -1001,6 +1002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
+  rotationSpeed: 200
   freezeRotation: 1
   canTurn: 1
   canMove: 1
@@ -1041,6 +1044,28 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
   cameraPivot: {fileID: 0}
+  outlineLayerIndex: 1
+--- !u!135 &2154119352406692690
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6347679525187428024}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.27523357
+  m_Center: {x: 0, y: 0.24168378, z: 0}
 --- !u!1 &6668332457911471249
 GameObject:
   m_ObjectHideFlags: 0

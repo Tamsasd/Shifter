@@ -49,6 +49,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 788304750916504911}
   minZoomZ: -10
   maxZoomZ: -1
+  zoomSmoothTime: 0.15
 --- !u!1 &6672312865200674992
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,9 +197,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7191424951438279168}
   - component: {fileID: 7659364980843488152}
+  - component: {fileID: 4545336615553019418}
   m_Layer: 0
   m_Name: ShiftCollider
-  m_TagString: Untagged
+  m_TagString: ShiftCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,5 +239,17 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.3, z: 3}
+  m_Size: {x: 1, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 1.5}
+--- !u!114 &4545336615553019418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8873582691641050817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe60440401cfec40982c303ff8dc709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
