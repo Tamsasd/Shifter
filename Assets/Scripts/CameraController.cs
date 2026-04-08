@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class CameraController : MonoBehaviour
 {
@@ -17,43 +16,55 @@ public class CameraController : MonoBehaviour
     public float minZoomZ = -10f;
     public float maxZoomZ = -1f;
 
+    [Header("Smoothing")]
+    public float zoomSmoothTime = 0.15f;
+    private float targetZoomZ;
+    private float zoomVelocity = 0f;
+
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         panSens = PlayerPrefs.GetFloat("PanSensitivity", 2000.0f);
         zoomSens = PlayerPrefs.GetFloat("ZoomSensitivity", 3.0f);
+
+        targetZoomZ = cameraTransform.localPosition.z;
     }
 
     void Update()
     {
-
         Character controlledCharacter = gameManager.GetControlledObject().GetComponent<Character>();
-
         transform.position = controlledCharacter.GetCameraPivot().position;
 
+        HandleRotation();
+        HandleZoom();
+    }
+
+    void HandleRotation()
+    {
         float mouseX = Input.GetAxis("Mouse X") * panSens * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * panSens * Time.deltaTime;
 
         yRotation += mouseX;
         xRotation -= mouseY;
-
         xRotation = Mathf.Clamp(xRotation, -80f, 80f);
 
         transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
+    }
 
-        // Zoom stuff:
+    void HandleZoom()
+    {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
 
         if (scrollInput != 0f)
         {
-            targetZ += scrollInput * zoomSens;
-            targetZ = Mathf.Clamp(targetZ, minZoomZ, maxZoomZ);
+            targetZoomZ += scrollInput * zoomSens;
+            targetZoomZ = Mathf.Clamp(targetZoomZ, minZoomZ, maxZoomZ);
         }
 
         float currentZ = cameraTransform.localPosition.z;
-        // SmoothDamp handles the acceleration and deceleration for you
-        float newZ = Mathf.SmoothDamp(currentZ, targetZ, ref zVelocity, smoothTime);
+
+        float newZ = Mathf.SmoothDamp(currentZ, targetZoomZ, ref zoomVelocity, zoomSmoothTime);
 
         cameraTransform.localPosition = new Vector3(0, 0, newZ);
     }
