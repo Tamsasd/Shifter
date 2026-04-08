@@ -233,10 +233,7 @@ PrefabInstance:
       addedObject: {fileID: 6464369090599476876}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 107283711239144465}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 732447811619844977}
+      addedObject: {fileID: 4518249568221084858}
   m_SourcePrefab: {fileID: 100100000, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
 --- !u!4 &4017467295708436425 stripped
 Transform:
@@ -260,6 +257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 200
   freezeRotation: 1
   canTurn: 1
   canMove: 1
@@ -323,8 +322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aa03593650c144895585747e7dac65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
   cameraPivot: {fileID: 7340353219786719400}
---- !u!65 &107283711239144465
+  outlineLayerIndex: 1
+--- !u!65 &4518249568221084858
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -343,21 +345,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 1.4479587, z: 2}
+  m_Size: {x: 0.5856075, y: 1.4479587, z: 0.33363536}
   m_Center: {x: 0, y: 0.85050285, z: 0}
---- !u!114 &732447811619844977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4362643975274958195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe60440401cfec40982c303ff8dc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineLayerIndex: 1
 --- !u!1001 &3968529870354400759
 PrefabInstance:
   m_ObjectHideFlags: 0

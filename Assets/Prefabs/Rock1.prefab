@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 6800614423545277158}
   - component: {fileID: 5641881202184511700}
   - component: {fileID: 7063029403210033710}
-  - component: {fileID: 705674997940019590}
   - component: {fileID: 4506378427983506152}
   - component: {fileID: 4510169187649423999}
   - component: {fileID: 4597956116354966508}
@@ -170,19 +169,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &705674997940019590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8711334277783077495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe60440401cfec40982c303ff8dc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineLayerIndex: 1
 --- !u!114 &4506378427983506152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de250e92b53f1004bb2bab0f294d3b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 200
   freezeRotation: 0
   canTurn: 0
   canMove: 1
@@ -213,6 +201,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
   cameraPivot: {fileID: 2642960079705210071}
+  outlineLayerIndex: 1
 --- !u!135 &4597956116354966508
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -232,5 +221,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5
+  m_Radius: 0.6
   m_Center: {x: 0.021872506, y: 0.47291395, z: 0.03429897}

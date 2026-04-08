@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 9126330829339034337}
   - component: {fileID: 5488138896569160847}
   - component: {fileID: 508469646970784889}
-  - component: {fileID: 6340715857342164815}
-  - component: {fileID: 1469690963420169348}
   - component: {fileID: 4859302210595719294}
+  - component: {fileID: 524706661077170157}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Character
@@ -50,6 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de250e92b53f1004bb2bab0f294d3b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 200
   freezeRotation: 0
   canTurn: 0
   canMove: 1
@@ -101,7 +102,23 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.264
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &6340715857342164815
+--- !u!114 &4859302210595719294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550349029127426839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4aa03593650c144895585747e7dac65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  cameraPivot: {fileID: 0}
+  outlineLayerIndex: 1
+--- !u!135 &524706661077170157
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,34 +137,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1469690963420169348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550349029127426839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe60440401cfec40982c303ff8dc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineLayerIndex: 1
---- !u!114 &4859302210595719294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550349029127426839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4aa03593650c144895585747e7dac65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &3215949121837193112
 GameObject:
   m_ObjectHideFlags: 0

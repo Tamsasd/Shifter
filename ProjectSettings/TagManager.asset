@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Character
   - Wheel
+  - ShiftCollider
   layers:
   - Default
   - TransparentFX

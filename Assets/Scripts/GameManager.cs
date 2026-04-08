@@ -5,16 +5,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Character controlledObject;
+    private Character controlledObject;
+    [SerializeField] private Character mainCharacter;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (controlledObject == null)
-        {
-            Debug.LogError("Starting controlled object is not set.");
-            return;
-        }
+        controlledObject = mainCharacter;
         controlledObject.ToggleControl(true);
     }
 
@@ -36,10 +33,16 @@ public class GameManager : MonoBehaviour
         return controlledObject;
     }
 
+    public Character GetMainCharacter()
+    {
+        return mainCharacter;
+    }
+
     public void setControlledObject(Character controlledObject)
     {
         this.controlledObject.ToggleControl(false);
         this.controlledObject = controlledObject;
+        this.controlledObject.DisableOutline();
         this.controlledObject.ToggleControl(true);
     }
 }

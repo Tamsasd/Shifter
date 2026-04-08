@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6838318047872285688}
   - component: {fileID: 2879162376148547427}
   - component: {fileID: 5164699516022615529}
-  - component: {fileID: 1218655438673656978}
   - component: {fileID: 4777288309532936945}
   - component: {fileID: 3887442310434174897}
   - component: {fileID: 3174587558783543053}
@@ -75,7 +74,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f218761e1d04b943b5f7b74c48b6ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOffset: {x: 0, y: 0, z: 0}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  cameraPivot: {fileID: 0}
+  outlineLayerIndex: 1
   rollableTransform: {fileID: 8761354616399505478}
   rollableRenderer: {fileID: 7628457054967386921}
   radius: 0
@@ -107,19 +109,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1218655438673656978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3044771631772184845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe60440401cfec40982c303ff8dc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineLayerIndex: 1
 --- !u!114 &4777288309532936945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 200
   freezeRotation: 1
   canTurn: 0
   canMove: 1
@@ -169,10 +160,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
-  m_Height: 3
+  m_Radius: 0.089923725
+  m_Height: 0.52329886
   m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.020968728, y: -0.0034004897, z: 0}
 --- !u!1 &7730344951958228775
 GameObject:
   m_ObjectHideFlags: 0

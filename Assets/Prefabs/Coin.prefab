@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1658006402154484893}
   - component: {fileID: 3723899521106728290}
   - component: {fileID: 7196565321398129629}
-  - component: {fileID: 7941590314131397697}
   - component: {fileID: 7397173582845922549}
   m_Layer: 0
   m_Name: Coin
@@ -99,7 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dm: {fileID: 0}
+  move: {fileID: 0}
+  character: {fileID: 0}
   pivotSpeed: 10
 --- !u!114 &3723899521106728290
 MonoBehaviour:
@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 200
   freezeRotation: 1
   canTurn: 0
   canMove: 1
@@ -135,21 +137,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7941590314131397697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2170114810271820888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe60440401cfec40982c303ff8dc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineLayerIndex: 1
 --- !u!114 &7397173582845922549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f218761e1d04b943b5f7b74c48b6ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOffset: {x: 0, y: 0, z: 0}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  cameraPivot: {fileID: 0}
+  outlineLayerIndex: 1
   rollableTransform: {fileID: 2554987016690255991}
   rollableRenderer: {fileID: 916243721397439070}
   radius: 0

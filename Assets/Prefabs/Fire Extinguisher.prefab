@@ -98,10 +98,9 @@ GameObject:
   - component: {fileID: 958866776285657012}
   - component: {fileID: 3615567819640956489}
   - component: {fileID: 383823124540949264}
-  - component: {fileID: 5462436841245494313}
-  - component: {fileID: 279126286059996939}
   - component: {fileID: 5819257044477723211}
   - component: {fileID: 1584980139726718201}
+  - component: {fileID: 9041877140961199354}
   m_Layer: 3
   m_Name: Fire Extinguisher
   m_TagString: Character
@@ -159,6 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7b7f1c683a10941ae23423368bd467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 200
   freezeRotation: 1
   canTurn: 0
   canMove: 1
@@ -212,40 +213,6 @@ MonoBehaviour:
   move: {fileID: 0}
   character: {fileID: 0}
   pivotSpeed: 10
---- !u!114 &5462436841245494313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7355575413104919794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe60440401cfec40982c303ff8dc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineLayerIndex: 1
---- !u!65 &279126286059996939
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7355575413104919794}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0.32327843, z: 0.017818332}
 --- !u!82 &5819257044477723211
 AudioSource:
   m_ObjectHideFlags: 0
@@ -255,7 +222,7 @@ AudioSource:
   m_GameObject: {fileID: 7355575413104919794}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5834892616041580961, guid: ac9b1558ee07efe49aa6b90e0850bf60, type: 2}
   m_audioClip: {fileID: 8300000, guid: ca13026e105d1ff4e87dc04bf67c7a0e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -357,6 +324,28 @@ MonoBehaviour:
   audioSource: {fileID: 5819257044477723211}
   audioClip: {fileID: 8300000, guid: ca13026e105d1ff4e87dc04bf67c7a0e, type: 3}
   cameraPivot: {fileID: 0}
+  outlineLayerIndex: 1
+--- !u!65 &9041877140961199354
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355575413104919794}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25389734, y: 0.6159766, z: 0.28187144}
+  m_Center: {x: -0.0027430207, y: 0.29898965, z: -0.012259781}
 --- !u!1001 &3761139304946119419
 PrefabInstance:
   m_ObjectHideFlags: 0

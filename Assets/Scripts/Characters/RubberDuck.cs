@@ -23,7 +23,6 @@ public class RubberDuck : Character
             || Input.GetKeyDown(KeyCode.S)
             || Input.GetKeyDown(KeyCode.A)
             || Input.GetKeyDown(KeyCode.D)
-            || Input.GetKeyDown(KeyCode.E)
             || Input.GetKeyDown(KeyCode.Q)
             || Input.GetKeyDown(KeyCode.Space);
 

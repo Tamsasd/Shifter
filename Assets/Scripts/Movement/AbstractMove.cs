@@ -5,8 +5,8 @@ using UnityEngine;
 public abstract class AbstractMove : MonoBehaviour
 {
     protected Rigidbody rb;
-    protected float speed = 5f;
-    protected float rotationSpeed = 200f;
+    [SerializeField] protected float speed = 5f;
+    [SerializeField] protected float rotationSpeed = 200f;
 
     protected Transform cameraTransform;
 

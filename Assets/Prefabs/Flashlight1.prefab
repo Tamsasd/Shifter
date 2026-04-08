@@ -213,9 +213,9 @@ GameObject:
   - component: {fileID: 1452238192534435644}
   - component: {fileID: 2855219308025499058}
   - component: {fileID: 7012249060363703212}
-  - component: {fileID: 8875891849965672041}
   - component: {fileID: 3224905461647584825}
   - component: {fileID: 5598610709690852365}
+  - component: {fileID: 8187807605184808249}
   m_Layer: 0
   m_Name: Flashlight1
   m_TagString: Character
@@ -275,7 +275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f218761e1d04b943b5f7b74c48b6ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOffset: {x: 0, y: 0, z: 0}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  cameraPivot: {fileID: 0}
+  outlineLayerIndex: 1
   rollableTransform: {fileID: 4243179596241760747}
   rollableRenderer: {fileID: 2947625705575550633}
   radius: 0
@@ -292,22 +295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 200
   freezeRotation: 1
   canTurn: 0
   canMove: 1
---- !u!114 &8875891849965672041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5859262043730649715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe60440401cfec40982c303ff8dc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineLayerIndex: 1
 --- !u!114 &3224905461647584825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,3 +342,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &8187807605184808249
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5859262043730649715}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07886404
+  m_Height: 0.6856593
+  m_Direction: 0
+  m_Center: {x: -0.010075033, y: -0.0020149946, z: 0}
