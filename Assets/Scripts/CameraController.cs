@@ -11,9 +11,7 @@ public class CameraController : MonoBehaviour
     private float xRotation = 0f;
     private float yRotation = 0f;
 
-    [Header("References")]
-    [Tooltip("Drag the child here by its arms")]
-    public Transform cameraTransform; // Gugu aut mondta ez megoldja minden problémám
+    public Transform cameraTransform;
 
     public float minZoomZ = -10f;
     public float maxZoomZ = -1f;
