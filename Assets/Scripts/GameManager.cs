@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         this.controlledObject.ToggleControl(false);
         this.controlledObject = controlledObject;
+        this.controlledObject.DisableOutline();
         this.controlledObject.ToggleControl(true);
     }
 }

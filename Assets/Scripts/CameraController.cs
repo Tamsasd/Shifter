@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class CameraController : MonoBehaviour
 {
@@ -46,15 +47,14 @@ public class CameraController : MonoBehaviour
 
         if (scrollInput != 0f)
         {
-            float zoomAmount = scrollInput * zoomSens;
-
-            // Move the child camera
-            cameraTransform.Translate(0, 0, zoomAmount, Space.Self);
-
-            // Clamp the child's location
-            Vector3 clampedPosition = cameraTransform.localPosition;
-            clampedPosition.z = Mathf.Clamp(clampedPosition.z, minZoomZ, maxZoomZ);
-            cameraTransform.localPosition = clampedPosition;
+            targetZ += scrollInput * zoomSens;
+            targetZ = Mathf.Clamp(targetZ, minZoomZ, maxZoomZ);
         }
+
+        float currentZ = cameraTransform.localPosition.z;
+        // SmoothDamp handles the acceleration and deceleration for you
+        float newZ = Mathf.SmoothDamp(currentZ, targetZ, ref zVelocity, smoothTime);
+
+        cameraTransform.localPosition = new Vector3(0, 0, newZ);
     }
 }
