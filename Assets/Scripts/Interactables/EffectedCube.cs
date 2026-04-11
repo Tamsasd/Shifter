@@ -7,11 +7,13 @@ public class EffectedCube : EffectedObject
     public override void OnActivate()
     {
         transform.position = new Vector3(transform.position.x, 2, transform.position.z);
+        Debug.Log("Activated " + this.name);
     }
 
     public override void OnDeactivate()
     {
         transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+        Debug.Log("Deactivated " + this.name);
     }
 
     public override void WhileActive()

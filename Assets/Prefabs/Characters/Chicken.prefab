@@ -900,9 +900,9 @@ GameObject:
   - component: {fileID: 1969512957543244916}
   - component: {fileID: 4125001142891707398}
   - component: {fileID: 2281519401169523979}
-  - component: {fileID: 3868536516827324427}
   - component: {fileID: 964150349460462175}
-  - component: {fileID: 2154119352406692690}
+  - component: {fileID: 6486254380544530244}
+  - component: {fileID: 4391432793660132707}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Character
@@ -1007,28 +1007,6 @@ MonoBehaviour:
   freezeRotation: 1
   canTurn: 1
   canMove: 1
---- !u!64 &3868536516827324427
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6347679525187428024}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2014698503841005554, guid: 605d0caffe3b2fe489bc37e772cb7496, type: 3}
 --- !u!114 &964150349460462175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,8 +1023,31 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   cameraPivot: {fileID: 0}
   outlineLayerIndex: 1
---- !u!135 &2154119352406692690
-SphereCollider:
+--- !u!136 &6486254380544530244
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6347679525187428024}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1675911
+  m_Height: 0.43411866
+  m_Direction: 1
+  m_Center: {x: -0.014356613, y: 0.2148356, z: -0.023587227}
+--- !u!136 &4391432793660132707
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1063,9 +1064,11 @@ SphereCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.27523357
-  m_Center: {x: 0, y: 0.24168378, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.20517683
+  m_Height: 0.4613253
+  m_Direction: 1
+  m_Center: {x: -0.014356613, y: 0.20123228, z: -0.030001163}
 --- !u!1 &6668332457911471249
 GameObject:
   m_ObjectHideFlags: 0

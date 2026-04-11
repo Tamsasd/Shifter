@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 7191424951438279168}
   - component: {fileID: 7659364980843488152}
   - component: {fileID: 4545336615553019418}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShiftCollider
   m_TagString: ShiftCollider
   m_Icon: {fileID: 0}
