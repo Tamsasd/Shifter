@@ -1,35 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EffectedCube : EffectedObject
 {
-    public override void OnActivate()
+    [SerializeField] private Material activeMaterial;
+    private Material inactiveMaterial;
+    private MeshRenderer renderer;
+
+    public override void OnActivate(Interactable effector)
     {
-        transform.position = new Vector3(transform.position.x, 2, transform.position.z);
-        Debug.Log("Activated " + this.name);
+
+        if (effector.name == "Lever")
+        {
+            renderer.material = activeMaterial;
+        }
     }
 
-    public override void OnDeactivate()
+    public override void OnDeactivate(Interactable effector)
     {
-        transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
-        Debug.Log("Deactivated " + this.name);
+
+        if (effector.name == "Lever")
+        {
+            renderer.material = inactiveMaterial;
+        }
     }
 
-    public override void WhileActive()
+    public override void OnValueChange(Interactable effector, float value)
     {
-        transform.Rotate(0, 1, 0);
+        transform.position = new Vector3(transform.position.x, 0.5f + (value / 180.0f * 2), transform.position.z);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public override void WhileActive(Interactable effector)
     {
-        
+        if (effector.name == "Button")
+        {
+            transform.Rotate(0, 1, 0);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        renderer = GetComponent<MeshRenderer>();
+        inactiveMaterial = renderer.material;
     }
 }

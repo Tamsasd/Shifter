@@ -24,6 +24,10 @@ public class Lever : Interactable
 
         startAngle = defaultState ? -30f : 30f;
         isActive = defaultState;
+        if (isActive)
+        {
+            OnActivate();
+        }
 
         JointLimits limits = hinge.limits;
         limits.min = -30f - startAngle;

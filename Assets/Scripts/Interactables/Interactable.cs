@@ -22,7 +22,7 @@ public class Interactable : MonoBehaviour
     {
         foreach (EffectedObject o in effectedObjects)
         {
-            o.OnActivate();
+            o.OnActivate(this);
         }
     }
 
@@ -30,7 +30,7 @@ public class Interactable : MonoBehaviour
     {
         foreach (EffectedObject o in effectedObjects)
         {
-            o.OnDeactivate();
+            o.OnDeactivate(this);
         }
     }
 
@@ -38,7 +38,15 @@ public class Interactable : MonoBehaviour
     {
         foreach (EffectedObject o in effectedObjects)
         {
-            o.WhileActive();
+            o.WhileActive(this);
+        }
+    }
+
+    protected virtual void OnValueChange(float value)
+    {
+        foreach (EffectedObject o in effectedObjects)
+        {
+            o.OnValueChange(this, value);
         }
     }
 
@@ -48,7 +56,10 @@ public class Interactable : MonoBehaviour
 
         foreach (EffectedObject target in effectedObjects)
         {
-            Gizmos.DrawLine(transform.position, target.transform.position);
+            if (target)
+            {
+                Gizmos.DrawLine(transform.position, target.transform.position);
+            }
         }
     }
 }
