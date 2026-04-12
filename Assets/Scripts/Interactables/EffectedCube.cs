@@ -12,7 +12,7 @@ public class EffectedCube : EffectedObject
     public override void OnActivate(Interactable effector)
     {
 
-        if (effector.name == "Lever")
+        if (effector.name == "Orb")
         {
             renderer.material = activeMaterial;
         }
@@ -21,7 +21,7 @@ public class EffectedCube : EffectedObject
     public override void OnDeactivate(Interactable effector)
     {
 
-        if (effector.name == "Lever")
+        if (effector.name == "Orb")
         {
             renderer.material = inactiveMaterial;
         }

@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1362706825155395736}
+  - component: {fileID: 8866218189910452829}
   - component: {fileID: 1713276761989646623}
   - component: {fileID: 1736080347333672954}
   - component: {fileID: 1547688522217526979}
   - component: {fileID: 1033203848717069689}
-  - component: {fileID: 8866218189910452829}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -37,6 +37,21 @@ Transform:
   - {fileID: 1834169288982689798}
   m_Father: {fileID: 2822033520417560428}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8866218189910452829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184797320049080661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b8683341e2f584d87df11947825b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectedObjects:
+  - {fileID: 0}
+  minimumMass: 1
 --- !u!33 &1713276761989646623
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -130,22 +145,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8866218189910452829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4184797320049080661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b8683341e2f584d87df11947825b28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectedObjects:
-  - {fileID: 0}
-  minimumMass: 1
-  activationDelay: 1
 --- !u!1 &5582067071110004702
 GameObject:
   m_ObjectHideFlags: 0
