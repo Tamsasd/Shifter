@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rotationSpeed: 200
+  rotationSpeed: 100
   freezeRotation: 1
   canTurn: 1
   canMove: 1
