@@ -23,4 +23,9 @@ public class DefaultMove : AbstractMove
         targetVelocity.y = rb.velocity.y;
         rb.velocity = targetVelocity;
     }
+
+    protected override void Jump()
+    {
+        rb.AddForce(transform.up * jumpForce);
+    }
 }

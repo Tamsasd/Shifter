@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class JetpackMovement : AbstractMove
 {
-    [SerializeField] private float sphereRadius = 0.3f;
+    
     [SerializeField] private float flyForce = 50.0f;
     [SerializeField] private float pivotSpeed = 10.0f;
     [SerializeField] private float tiltAngle = 30.0f;
-    [SerializeField] private LayerMask playerMask;
     [SerializeField] private ParticleSystem foamParticleSystem;
     private bool isPressingFly = false;
 
@@ -60,11 +59,6 @@ public class JetpackMovement : AbstractMove
         }
     }
 
-    bool IsGrounded()
-    {
-        return Physics.CheckSphere(transform.position, sphereRadius, ~playerMask);
-    }
-
     private void Fly()
     {
         rb.AddForce(transform.up * flyForce);
@@ -81,5 +75,10 @@ public class JetpackMovement : AbstractMove
     protected override void Turn()
     {
         throw new System.NotImplementedException();
+    }
+
+    protected override void Jump()
+    {
+        throw new NotImplementedException();
     }
 }

@@ -26,4 +26,9 @@ public class BallMovement : AbstractMove
 
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
     }
+
+    protected override void Jump()
+    {
+        throw new System.NotImplementedException();
+    }
 }

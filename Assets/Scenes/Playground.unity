@@ -1348,37 +1348,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4269351912151903415, guid: 7b84bce0101a2ac478d58085a7750a6d, type: 3}
   m_PrefabInstance: {fileID: 3304949718863861204}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2083752752
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2083752753}
-  m_Layer: 0
-  m_Name: CameraPivot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2083752753
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083752752}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.782, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1268581159}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &198810247577439623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1501,10 +1470,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1796413901}
     m_Modifications:
-    - target: {fileID: 1916005873506448717, guid: f52486884cf3b184a89e66439f2eb930, type: 3}
-      propertyPath: rotationSpeed
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 3818808889040350471, guid: f52486884cf3b184a89e66439f2eb930, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.534839
@@ -1659,20 +1624,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580193125208920305, guid: 1d610ed7d6c007447be6ca059724bb03, type: 3}
-      propertyPath: cameraPivot
-      value: 
-      objectReference: {fileID: 2083752753}
     - target: {fileID: 9220949156921871634, guid: 1d610ed7d6c007447be6ca059724bb03, type: 3}
       propertyPath: m_Name
       value: Office Chair
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3297924628523797153, guid: 1d610ed7d6c007447be6ca059724bb03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2083752753}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d610ed7d6c007447be6ca059724bb03, type: 3}
 --- !u!1001 &1144764414571071498
@@ -2085,6 +2043,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1796413901}
     m_Modifications:
+    - target: {fileID: 2281519401169523979, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
+      propertyPath: canJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281519401169523979, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
+      propertyPath: jumpForce
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6347679525187428024, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
       propertyPath: m_Name
       value: Chicken
