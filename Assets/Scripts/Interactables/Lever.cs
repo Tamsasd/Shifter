@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(HingeJoint))]
 public class Lever : Interactable
 {
     [SerializeField] private bool defaultState;
@@ -24,15 +25,23 @@ public class Lever : Interactable
 
         startAngle = defaultState ? -30f : 30f;
         isActive = defaultState;
+
+        hinge.useLimits = true;
+
+        JointLimits limits = hinge.limits;
+
+        limits.min = -30f - startAngle - 1f;
+        limits.max = 30f - startAngle + 1f;
+
+        hinge.limits = limits;
+    }
+
+    private void Start()
+    {
         if (isActive)
         {
             OnActivate();
         }
-
-        JointLimits limits = hinge.limits;
-        limits.min = -30f - startAngle;
-        limits.max = 30f - startAngle;
-        hinge.limits = limits;
     }
 
     void Update()

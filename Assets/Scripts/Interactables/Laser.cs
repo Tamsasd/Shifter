@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(LineRenderer))]
 public class Laser : MonoBehaviour
 {
     [SerializeField] private float maxLaserDistance = 100.0f;
@@ -9,7 +10,7 @@ public class Laser : MonoBehaviour
     [SerializeField] private LayerMask hitLayers;
     private LineRenderer lineRenderer;
 
-    void Start()
+    private void OnValidate()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.enabled = false;

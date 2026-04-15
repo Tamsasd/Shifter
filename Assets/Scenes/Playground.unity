@@ -312,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2499100039390023455, guid: 660b81d6a8a910c4796d17bd682f5ea8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.25881907
+      value: -0.25881907
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectedObjects:
   - {fileID: 8412237363197136069}
-  defaultState: 0
+  defaultState: 1
 --- !u!1 &463050630
 GameObject:
   m_ObjectHideFlags: 0

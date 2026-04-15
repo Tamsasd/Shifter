@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public abstract class AbstractMove : MonoBehaviour
 {
     protected Rigidbody rb;

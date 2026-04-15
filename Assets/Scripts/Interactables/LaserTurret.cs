@@ -28,8 +28,7 @@ public class LaserTurret : EffectedObject
         laser.ShootLaser();
     }
 
-  
-    void Start()
+    private void OnValidate()
     {
         head = transform.Find("Head");
         firePoint = head.Find("FirePoint");

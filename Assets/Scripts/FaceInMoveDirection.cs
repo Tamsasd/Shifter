@@ -8,7 +8,7 @@ public class FaceInMoveDirection : MonoBehaviour
 
     public float pivotSpeed = 10f;
 
-    void Start()
+    void OnValidate()
     {
         if (move == null)
         {

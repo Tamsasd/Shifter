@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent (typeof (MeshRenderer))]
 public class EffectedCube : EffectedObject
 {
     [SerializeField] private Material activeMaterial;
     private Material inactiveMaterial;
-    private MeshRenderer renderer;
+    private MeshRenderer meshRenderer;
 
     public override void OnActivate(Interactable effector)
     {
 
         if (effector.name == "Orb")
         {
-            renderer.material = activeMaterial;
+            meshRenderer.material = activeMaterial;
         }
     }
 
@@ -23,7 +24,7 @@ public class EffectedCube : EffectedObject
 
         if (effector.name == "Orb")
         {
-            renderer.material = inactiveMaterial;
+            meshRenderer.material = inactiveMaterial;
         }
     }
 
@@ -42,7 +43,7 @@ public class EffectedCube : EffectedObject
 
     private void Start()
     {
-        renderer = GetComponent<MeshRenderer>();
-        inactiveMaterial = renderer.material;
+        meshRenderer = GetComponent<MeshRenderer>();
+        inactiveMaterial = meshRenderer.material;
     }
 }

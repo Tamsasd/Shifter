@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(HingeJoint))]
 public class Wheel : Interactable
 {
     private float lastAngle;
