@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AbstractMove))]
 public abstract class Character : MonoBehaviour
 {
     public Transform GetCameraPivot()

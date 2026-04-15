@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public abstract class AbstractMove : MonoBehaviour
 {
     protected Rigidbody rb;
     [SerializeField] protected float speed = 5f;
     [SerializeField] protected float rotationSpeed = 200f;
+
+    [SerializeField] private float sphereRadius = 0.3f;
+    [SerializeField] private LayerMask playerMask;
 
     protected Transform cameraTransform;
 
@@ -19,6 +24,8 @@ public abstract class AbstractMove : MonoBehaviour
     [SerializeField] protected bool freezeRotation = true;
     [SerializeField] protected bool canTurn = true;
     [SerializeField] protected bool canMove = true;
+    [SerializeField] protected bool canJump = false;
+    [SerializeField] protected float jumpForce = 50.0f;
 
     protected virtual void Start()
     {
@@ -31,6 +38,10 @@ public abstract class AbstractMove : MonoBehaviour
     protected virtual void Update()
     {
         SetMoveAxis();
+        if (Input.GetKeyDown(KeyCode.Space) && inControl && canJump && IsGrounded())
+        {
+            Jump();
+        }
     }
 
     void SetMoveAxis()
@@ -57,6 +68,8 @@ public abstract class AbstractMove : MonoBehaviour
     protected abstract void Turn();
     protected abstract void Move();
 
+    protected abstract void Jump();
+
     public Vector3 GetMoveDirection()
     {
         Vector3 forward = cameraTransform.forward;
@@ -73,5 +86,10 @@ public abstract class AbstractMove : MonoBehaviour
     public void ToggleControl(bool value)
     {
         inControl = value;
+    }
+
+    protected bool IsGrounded()
+    {
+        return Physics.CheckSphere(transform.position, sphereRadius, ~playerMask);
     }
 }

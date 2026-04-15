@@ -42,23 +42,21 @@ public class Shift : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Character"))
+        Character otherChar = other.GetComponentInParent<Character>();
+
+        if (otherChar != null && otherChar.gameObject.CompareTag("Character"))
         {
-            if (other.TryGetComponent(out Character otherChar))
-            {
-                shiftableCharacters.Add(otherChar);
-            }
+            shiftableCharacters.Add(otherChar);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Character"))
+        Character otherChar = other.GetComponentInParent<Character>();
+
+        if (otherChar != null && otherChar.gameObject.CompareTag("Character"))
         {
-            if (other.TryGetComponent(out Character otherChar))
-            {
-                shiftableCharacters.Remove(otherChar);
-            }
+            shiftableCharacters.Remove(otherChar);
         }
     }
 }

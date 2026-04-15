@@ -7,6 +7,9 @@ TagManager:
   - Character
   - Wheel
   - ShiftCollider
+  - Laser
+  - LaserActivated
+  - Mirror
   layers:
   - Default
   - TransparentFX
