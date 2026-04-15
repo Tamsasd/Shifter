@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(Animator))]
 public class ChickenCharacter : Character
 {
     private Animator animator;
+    [SerializeField] private GameObject featherEffect;
 
     void Start()
     {
@@ -38,5 +40,13 @@ public class ChickenCharacter : Character
             animator.SetFloat("Vert", 0f);
             animator.SetFloat("State", 0f);
         }
+    }
+
+    public void Die()
+    {
+        Instantiate(featherEffect, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), Quaternion.identity);
+        Destroy(gameObject);
+
+        // GameOver()
     }
 }

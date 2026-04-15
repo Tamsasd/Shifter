@@ -987,8 +987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: {fileID: 0}
-  character: {fileID: 0}
+  move: {fileID: 2281519401169523979}
+  character: {fileID: 964150349460462175}
   pivotSpeed: 10
 --- !u!114 &2281519401169523979
 MonoBehaviour:
@@ -1004,9 +1004,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   rotationSpeed: 200
+  sphereRadius: 0.3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
   freezeRotation: 1
   canTurn: 1
   canMove: 1
+  canJump: 1
+  jumpForce: 200
 --- !u!114 &964150349460462175
 MonoBehaviour:
   m_ObjectHideFlags: 0
