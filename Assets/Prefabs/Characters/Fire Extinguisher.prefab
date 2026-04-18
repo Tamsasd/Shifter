@@ -132,7 +132,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7355575413104919794}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 26fdcb775f29ae94fa4af42a678e5d03, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -160,16 +160,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 200
-  freezeRotation: 1
-  canTurn: 0
-  canMove: 1
   sphereRadius: 0.3
-  flyForce: 20
-  pivotSpeed: 10
-  tiltAngle: 30
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+  freezeRotation: 1
+  canTurn: 0
+  canMove: 1
+  canJump: 0
+  jumpForce: 50
+  flyForce: 100
+  pivotSpeed: 10
+  tiltAngle: 30
   foamParticleSystem: {fileID: 6854620052630494237}
 --- !u!54 &3615567819640956489
 Rigidbody:
@@ -179,7 +181,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7355575413104919794}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 8
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -210,8 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: {fileID: 0}
-  character: {fileID: 0}
+  move: {fileID: 958866776285657012}
+  character: {fileID: 1584980139726718201}
   pivotSpeed: 10
 --- !u!82 &5819257044477723211
 AudioSource:

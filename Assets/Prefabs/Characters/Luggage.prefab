@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 2249112782290787583}
-  character: {fileID: 0}
+  character: {fileID: 6464369090599476876}
   pivotSpeed: 10
 --- !u!1001 &3479681920182136866
 PrefabInstance:
@@ -126,15 +126,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.534839
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.7421646
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 11.504077
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
       propertyPath: m_LocalRotation.w
@@ -142,15 +142,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: de3847303c976aa43b1abf4fed7f4b88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -257,11 +257,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   rotationSpeed: 200
+  sphereRadius: 0.3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
   freezeRotation: 1
   canTurn: 1
   canMove: 1
+  canJump: 0
+  jumpForce: 50
 --- !u!54 &741447545261695841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -270,7 +276,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4362643975274958195}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -296,7 +302,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4362643975274958195}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: bf7a0edfb5f45f940977b0080041549b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -430,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 2249112782290787583}
-  character: {fileID: 0}
+  character: {fileID: 6464369090599476876}
   pivotSpeed: 10
 --- !u!1001 &6852674345031492579
 PrefabInstance:
@@ -510,7 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 2249112782290787583}
-  character: {fileID: 0}
+  character: {fileID: 6464369090599476876}
   pivotSpeed: 10
 --- !u!4 &8095631173109487970 stripped
 Transform:
@@ -595,7 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: 2249112782290787583}
-  character: {fileID: 0}
+  character: {fileID: 6464369090599476876}
   pivotSpeed: 10
 --- !u!4 &5113889819105945764 stripped
 Transform:

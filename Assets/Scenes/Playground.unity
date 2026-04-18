@@ -1077,9 +1077,9 @@ Transform:
   m_Children:
   - {fileID: 8881504611778358150}
   - {fileID: 1997317350}
+  - {fileID: 1468372850}
   - {fileID: 740130608}
   - {fileID: 1877732389}
-  - {fileID: 1468372850}
   - {fileID: 1268906807}
   - {fileID: 1307457206}
   - {fileID: 1569852749}
@@ -1907,10 +1907,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1796413901}
     m_Modifications:
-    - target: {fileID: 964150349460462175, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
-      propertyPath: featherEffect
-      value: 
-      objectReference: {fileID: 2426096871002854453, guid: 2847745b21594fc4abee86fddfff827e, type: 3}
     - target: {fileID: 6347679525187428024, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
       propertyPath: m_Name
       value: Chicken
