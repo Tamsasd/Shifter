@@ -215,7 +215,6 @@ GameObject:
   - component: {fileID: 7012249060363703212}
   - component: {fileID: 3224905461647584825}
   - component: {fileID: 5598610709690852365}
-  - component: {fileID: 8187807605184808249}
   m_Layer: 0
   m_Name: Flashlight1
   m_TagString: Character
@@ -348,26 +347,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &8187807605184808249
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5859262043730649715}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.07886404
-  m_Height: 0.6856593
-  m_Direction: 0
-  m_Center: {x: -0.010075033, y: -0.0020149946, z: 0}

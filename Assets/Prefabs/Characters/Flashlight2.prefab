@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5164699516022615529}
   - component: {fileID: 4777288309532936945}
   - component: {fileID: 3887442310434174897}
-  - component: {fileID: 3174587558783543053}
   m_Layer: 0
   m_Name: Flashlight2
   m_TagString: Character
@@ -147,29 +146,6 @@ MonoBehaviour:
   move: {fileID: 4777288309532936945}
   character: {fileID: 2879162376148547427}
   pivotSpeed: 10
---- !u!136 &3174587558783543053
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3044771631772184845}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.089923725
-  m_Height: 0.52329886
-  m_Direction: 0
-  m_Center: {x: 0.020968728, y: -0.0034004897, z: 0}
 --- !u!1 &7730344951958228775
 GameObject:
   m_ObjectHideFlags: 0

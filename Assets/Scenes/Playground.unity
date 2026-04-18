@@ -1041,6 +1041,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skateboard
       objectReference: {fileID: 0}
+    - target: {fileID: 8416682798277890906, guid: adbf5edb82f8f264eb5a3bfa00304322, type: 3}
+      propertyPath: m_Size.y
+      value: 0.07871954
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416682798277890906, guid: adbf5edb82f8f264eb5a3bfa00304322, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0736172
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615877886912966986, guid: adbf5edb82f8f264eb5a3bfa00304322, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1907,6 +1919,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1796413901}
     m_Modifications:
+    - target: {fileID: 2281519401169523979, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
+      propertyPath: jumpForce
+      value: 350
+      objectReference: {fileID: 0}
     - target: {fileID: 6347679525187428024, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
       propertyPath: m_Name
       value: Chicken

@@ -256,7 +256,6 @@ GameObject:
   - component: {fileID: 4674938343824368201}
   - component: {fileID: 4765612254744684039}
   - component: {fileID: 4178643082627972675}
-  - component: {fileID: 225644396965596595}
   - component: {fileID: 1304916346419711916}
   m_Layer: 0
   m_Name: Office Chair
@@ -422,27 +421,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &225644396965596595
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9220949156921871634}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.7128516, y: 1.3936058, z: 0.72266203}
-  m_Center: {x: 0.001306057, y: 0.7038972, z: 0.0050668716}
 --- !u!114 &1304916346419711916
 MonoBehaviour:
   m_ObjectHideFlags: 0

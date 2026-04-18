@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 7063029403210033710}
   - component: {fileID: 4506378427983506152}
   - component: {fileID: 4510169187649423999}
-  - component: {fileID: 4597956116354966508}
   m_Layer: 0
   m_Name: Rock1
   m_TagString: Character
@@ -208,24 +207,3 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   cameraPivot: {fileID: 2642960079705210071}
   outlineLayerIndex: 1
---- !u!135 &4597956116354966508
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8711334277783077495}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.6
-  m_Center: {x: 0.021872506, y: 0.47291395, z: 0.03429897}
