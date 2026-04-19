@@ -26,7 +26,8 @@ public class PressurePlate : Interactable
 
     private void OnTriggerEnter(Collider other)
     {
-        massOnButton += other.GetComponent<Rigidbody>().mass;
+        massOnButton += GetMass(other);
+        Debug.Log("mass: " + massOnButton); 
         if (!isActivated && massOnButton >= minimumMass)
         { 
             OnActivate();
@@ -37,13 +38,20 @@ public class PressurePlate : Interactable
 
     private void OnTriggerExit(Collider other)
     {
-        massOnButton -= other.GetComponent<Rigidbody>().mass;
+        massOnButton -= GetMass(other);
         if (isActivated && massOnButton < minimumMass)
         {
             OnDeactivate();
             animator.SetBool("buttonPressed", false);
             isActivated = false;
         }
+    }
+
+    private float GetMass(Collider other)
+    {
+        Rigidbody otherRigidbody = other.attachedRigidbody;        
+        
+        return otherRigidbody == null ? 0 : otherRigidbody.mass;
     }
 
 
