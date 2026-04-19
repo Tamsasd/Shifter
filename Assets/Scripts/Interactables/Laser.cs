@@ -44,6 +44,13 @@ public class Laser : MonoBehaviour
                     rayOrigin = hit.point + hit.normal * 0.001f;
                     rayDirection = Vector3.Reflect(rayDirection, hit.normal);
                 }
+                else if (hit.collider.CompareTag("Character"))
+                {
+                    if (hit.transform.TryGetComponent<ChickenCharacter>(out ChickenCharacter cc))
+                    {
+                        cc.Die();
+                    }
+                }
                 else
                 {
                     break;

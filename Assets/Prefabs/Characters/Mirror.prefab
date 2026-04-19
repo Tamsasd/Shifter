@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 8781742970633700542}
   - component: {fileID: 1577980236790797592}
   m_Layer: 0
-  m_Name: Surface (1)
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3452496254873678810}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6996490825877132065}
   - component: {fileID: 566415453846803819}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 2933296574063872821}
   - component: {fileID: 8819670164592752124}
   - component: {fileID: 4454107832118326485}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,9 +467,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 100
+  sphereRadius: 0.3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
   freezeRotation: 1
   canTurn: 1
   canMove: 1
+  canJump: 0
+  jumpForce: 50
 --- !u!54 &2500369550639207331
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -478,7 +484,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8437279498985855255}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -509,8 +515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6cd981f8b29b14eb5af0700883c7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: {fileID: 0}
-  character: {fileID: 0}
+  move: {fileID: 1916005873506448717}
+  character: {fileID: 8627504692258463286}
   pivotSpeed: 10
 --- !u!1 &8779381810732751076
 GameObject:
@@ -551,7 +557,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8779381810732751076}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 754a0f68f3f29f348929281385d9a811, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
