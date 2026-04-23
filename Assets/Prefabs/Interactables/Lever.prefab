@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 2499100039390023455}
   - component: {fileID: 3830634980841105562}
   - component: {fileID: 6687901346567611050}
+  - component: {fileID: 1597913387420592753}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -60,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4146269279733938600}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.25881907, w: 0.9659259}
   m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -135,6 +136,20 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1597913387420592753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4146269279733938600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d43d5be8cae46b4192b93edc9c4e55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectedObjects: []
+  defaultState: 0
 --- !u!1 &5687916437884126420
 GameObject:
   m_ObjectHideFlags: 0
