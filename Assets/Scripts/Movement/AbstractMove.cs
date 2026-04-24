@@ -7,25 +7,27 @@ using UnityEngine;
 public abstract class AbstractMove : MonoBehaviour
 {
     protected Rigidbody rb;
-    [SerializeField] protected float speed = 5f;
-    [SerializeField] protected float rotationSpeed = 200f;
-
-    [SerializeField] private float sphereRadius = 0.3f;
-    [SerializeField] private LayerMask playerMask;
-
-    protected Transform cameraTransform;
-
     protected float moveX;
     protected float moveZ;
-
     protected bool inControl = false;
 
-
-    [SerializeField] protected bool freezeRotation = true;
-    [SerializeField] protected bool canTurn = true;
+    [Header("Moving")]
     [SerializeField] protected bool canMove = true;
+    [SerializeField] protected float speed = 5f;
+
+    [Header("Turning/Rotating")]
+    [SerializeField] protected bool canTurn = true;
+    [SerializeField] protected float rotationSpeed = 200f;
+    [SerializeField] protected bool freezeRotation = true;
+
+    [Header("Jumping")]
     [SerializeField] protected bool canJump = false;
     [SerializeField] protected float jumpForce = 50.0f;
+    [SerializeField] private float groundCheckSphereRadius = 0.3f;
+    [SerializeField] private Vector3 groundCheckOffset = new Vector3(0, 0, 0);
+    [SerializeField] private LayerMask notGroundMask;
+
+    protected Transform cameraTransform;
 
     protected virtual void Start()
     {
@@ -44,12 +46,6 @@ public abstract class AbstractMove : MonoBehaviour
         }
     }
 
-    void SetMoveAxis()
-    {
-        moveX = Input.GetAxisRaw("Horizontal");
-        moveZ = Input.GetAxisRaw("Vertical");
-    }
-
     private void FixedUpdate()
     {
         if (inControl)
@@ -64,10 +60,14 @@ public abstract class AbstractMove : MonoBehaviour
             }
         }
     }
+    void SetMoveAxis()
+    {
+        moveX = Input.GetAxisRaw("Horizontal");
+        moveZ = Input.GetAxisRaw("Vertical");
+    }
 
     protected abstract void Turn();
     protected abstract void Move();
-
     protected abstract void Jump();
 
     public Vector3 GetMoveDirection()
@@ -90,6 +90,14 @@ public abstract class AbstractMove : MonoBehaviour
 
     protected bool IsGrounded()
     {
-        return Physics.CheckSphere(transform.position, sphereRadius, ~playerMask);
+        Vector3 spherePosition = transform.position + groundCheckOffset;
+        return Physics.CheckSphere(spherePosition, groundCheckSphereRadius, ~notGroundMask);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Vector3 spherePosition = transform.position + groundCheckOffset;
+        Gizmos.DrawWireSphere(spherePosition, groundCheckSphereRadius);
     }
 }

@@ -112,17 +112,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  rotationSpeed: 200
-  sphereRadius: 0.3
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  freezeRotation: 1
-  canTurn: 0
   canMove: 1
+  speed: 3
+  canTurn: 0
+  rotationSpeed: 200
+  freezeRotation: 1
   canJump: 0
   jumpForce: 50
+  groundCheckSphereRadius: 0.3
+  groundCheckOffset: {x: 0, y: 0, z: 0}
+  notGroundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &7397173582845922549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +155,7 @@ GameObject:
   - component: {fileID: 2554987016690255991}
   - component: {fileID: 4921921101280399673}
   - component: {fileID: 916243721397439070}
+  - component: {fileID: 7419125427601451802}
   m_Layer: 0
   m_Name: CoinMesh
   m_TagString: Character
@@ -226,3 +228,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7419125427601451802
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6066882243732746675}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5894363749523588358, guid: bfd6165ce63e47548aa05d29ec1bf2fb, type: 3}
