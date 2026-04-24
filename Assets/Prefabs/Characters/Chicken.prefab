@@ -1002,17 +1002,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  rotationSpeed: 200
-  sphereRadius: 0.3
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  freezeRotation: 1
-  canTurn: 1
   canMove: 1
+  speed: 3
+  canTurn: 1
+  rotationSpeed: 200
+  freezeRotation: 1
   canJump: 1
   jumpForce: 200
+  groundCheckSphereRadius: 1
+  notGroundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &964150349460462175
 MonoBehaviour:
   m_ObjectHideFlags: 0
