@@ -45,4 +45,19 @@ public class GameManager : MonoBehaviour
         this.controlledObject.DisableOutline();
         this.controlledObject.ToggleControl(true);
     }
+
+    public void Win()
+    {
+        Debug.Log("Game won");
+
+        // TODO
+    }
+
+    public void Lose()
+    {
+        Debug.Log("Game Lost");
+
+        // TODO
+    }
+
 }

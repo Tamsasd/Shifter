@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door : EffectedObject
 {
-    [SerializeField] private Animator animator;
+    private Animator animator;
 
     public override void OnActivate(Interactable effector)
     {

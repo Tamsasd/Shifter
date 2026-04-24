@@ -8,10 +8,12 @@ public class ChickenCharacter : Character
 {
     private Animator animator;
     [SerializeField] private GameObject featherEffect;
+    private GameManager gameManager;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -40,6 +42,12 @@ public class ChickenCharacter : Character
             animator.SetFloat("Vert", 0f);
             animator.SetFloat("State", 0f);
         }
+
+        if (transform.position.y < -50f)
+        {
+            Debug.Log(transform.position.y);
+            Die();
+        }
     }
 
     public void Die()
@@ -47,6 +55,6 @@ public class ChickenCharacter : Character
         Instantiate(featherEffect, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), Quaternion.identity);
         Destroy(gameObject);
 
-        // GameOver()
+        gameManager.Lose();
     }
 }
