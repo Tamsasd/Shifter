@@ -12,6 +12,8 @@ public class Pause : MonoBehaviour
 
     private GameManager gameManager;
 
+    [SerializeField] private GameObject controllsCanvas;
+
     // Create a static instance of the script
     public static Pause Instance { get; private set; }
 
@@ -38,7 +40,7 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex != 0) // So it won't open in the menu
+        if (SceneManager.GetActiveScene().buildIndex != 0 && !gameManager.isWon) // So it won't open in the menu
         {
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.P))
             {
@@ -56,6 +58,7 @@ public class Pause : MonoBehaviour
 
     public void PauseGame()
     {
+        controllsCanvas.SetActive(false);
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
         isPaused = true;
@@ -64,6 +67,7 @@ public class Pause : MonoBehaviour
 
     public void ResumeGame()
     {
+        controllsCanvas.SetActive(true);
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         isPaused = false;
@@ -82,5 +86,12 @@ public class Pause : MonoBehaviour
         ResumeGame();
         gameManager.setCursorLock(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadScene(int sceneID)
+    {
+        ResumeGame();
+        gameManager.setCursorLock(false);
+        SceneManager.LoadScene(sceneID);
     }
 }

@@ -1,21 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     private Character controlledObject;
-    [SerializeField] private Character mainCharacter;
 
-    // Start is called before the first frame update
+    [SerializeField] private Character mainCharacter;
+    [SerializeField] private GameObject winCanvas;
+    [SerializeField] private GameObject controllsCanvas;
+
+    private Pause pauseManager;
+    private StopwatchTimer stopwatchTimer;
+
+    public bool isWon = false;
+
+    private void Awake()
+    {
+        pauseManager = GetComponent<Pause>();
+        stopwatchTimer = GetComponent<StopwatchTimer>();
+    }
+
     void Start()
     {
         controlledObject = mainCharacter;
         controlledObject.ToggleControl(true);
+
+        winCanvas.SetActive(false);
+        controllsCanvas.SetActive(true);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -49,8 +65,13 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         Debug.Log("Game won");
-
-        // TODO
+        isWon = true;
+        setCursorLock(false);
+        controllsCanvas.SetActive(false);
+        winCanvas.SetActive(true);
+        Time.timeScale = 0;
+        stopwatchTimer.StopTimer();
+        Pause.isPaused = true;
     }
 
     public void Lose()
