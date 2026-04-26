@@ -10,12 +10,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Character mainCharacter;
     [SerializeField] private GameObject winCanvas;
+    [SerializeField] private GameObject loseCanvas;
     [SerializeField] private GameObject controllsCanvas;
 
     private Pause pauseManager;
     private StopwatchTimer stopwatchTimer;
 
-    public bool isWon = false;
+    public bool isOver = false;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
         controlledObject.ToggleControl(true);
 
         winCanvas.SetActive(false);
+        loseCanvas.SetActive(false);
         controllsCanvas.SetActive(true);
     }
 
@@ -65,7 +67,7 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         Debug.Log("Game won");
-        isWon = true;
+        isOver = true;
         setCursorLock(false);
         controllsCanvas.SetActive(false);
         winCanvas.SetActive(true);
@@ -77,8 +79,11 @@ public class GameManager : MonoBehaviour
     public void Lose()
     {
         Debug.Log("Game Lost");
-
-        // TODO
+        isOver = true; // it's so over...
+        setCursorLock(false);
+        controllsCanvas.SetActive(false);
+        loseCanvas.SetActive(true);
+        stopwatchTimer.StopTimer();
     }
 
 }

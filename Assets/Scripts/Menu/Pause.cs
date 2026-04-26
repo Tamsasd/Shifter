@@ -40,7 +40,7 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex != 0 && !gameManager.isWon) // So it won't open in the menu
+        if (SceneManager.GetActiveScene().buildIndex != 0 && !gameManager.isOver) // So it won't open in the menu or after gameover
         {
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.P))
             {
