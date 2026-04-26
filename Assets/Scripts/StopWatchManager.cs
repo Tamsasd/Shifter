@@ -28,7 +28,6 @@ public class StopwatchTimer : MonoBehaviour
 
     private void UpdateTimerDisplay()
     {
-        if (timerText == null);
         int minutes = Mathf.FloorToInt(currentTime / 60f);
         int seconds = Mathf.FloorToInt(currentTime % 60f);
         int milliseconds = Mathf.FloorToInt((currentTime % 1f) * 1000f);

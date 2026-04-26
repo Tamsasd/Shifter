@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject winCanvas;
     [SerializeField] private GameObject loseCanvas;
     [SerializeField] private GameObject controllsCanvas;
+    [SerializeField] private ControllsUIManager hudManager;
 
     private Pause pauseManager;
     private StopwatchTimer stopwatchTimer;
@@ -62,7 +64,32 @@ public class GameManager : MonoBehaviour
         this.controlledObject = controlledObject;
         this.controlledObject.DisableOutline();
         this.controlledObject.ToggleControl(true);
-    }
+
+        AbstractMove moveScript = this.controlledObject.GetComponent<AbstractMove>();
+
+        string objName = this.controlledObject.gameObject.name.ToLower();
+        string extra = "";
+
+        if (!string.IsNullOrEmpty(moveScript.extraHUDText))
+        {
+            extra = moveScript.extraHUDText;
+        }
+        else if (objName.Contains("fire"))
+        {
+            extra = "Space: fly";
+        }
+        else if (objName.Contains("duck"))
+        {
+            extra = "W, A, S, D, Q, E, Space: Quack";
+        }
+
+        hudManager.SetHUD(
+            moveScript.canMove,
+            moveScript.canTurn,
+            moveScript.canJump,
+            extra
+        );
+}
 
     public void Win()
     {
