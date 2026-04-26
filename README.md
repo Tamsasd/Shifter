@@ -19,7 +19,7 @@
 
 ## Dependencies
 >To respect licensing agreements, third-party 3D models and textures are excluded from this repository. 
->To run the simulation visually as intended, please download the following assets and place tehm inside the `Assets/` directory before opening the scene.  
+>To run the simulation visually as intended, please download the following assets and place them inside the `Assets/` directory before opening the scene.  
 > * **[Ultimate Interior Pack by Fries and Seagull](https://assetstore.unity.com/packages/3d/props/interior/ultimate-interior-furniture-pack-low-poly-household-kitchen-prop-316897)** 
 >  * [Animals FREE - Animated Low Poly 3D Models by ithappy](https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727)
 >  * [Free Outline by Alexander Ameye](https://assetstore.unity.com/packages/vfx/shaders/free-outline-326925)
