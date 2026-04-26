@@ -1657,14 +1657,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 958866776285657012, guid: 017adb46fc90bc744b0a2e76e5a2d674, type: 3}
-      propertyPath: notGroundMask.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6515185296312023110, guid: 017adb46fc90bc744b0a2e76e5a2d674, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7355575413104919794, guid: 017adb46fc90bc744b0a2e76e5a2d674, type: 3}
       propertyPath: m_Name
       value: Fire Extinguisher

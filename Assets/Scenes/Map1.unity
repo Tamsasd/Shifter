@@ -8683,6 +8683,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6203424563420958945, guid: d312028a339d8464386536afd2bd3908, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 338.5267
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203424563420958945, guid: d312028a339d8464386536afd2bd3908, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 107.5756
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203424563420958945, guid: d312028a339d8464386536afd2bd3908, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203424563420958945, guid: d312028a339d8464386536afd2bd3908, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 53.78778
+      objectReference: {fileID: 0}
     - target: {fileID: 8353191944257041627, guid: d312028a339d8464386536afd2bd3908, type: 3}
       propertyPath: m_Name
       value: TimerCanvas
@@ -8779,6 +8795,34 @@ PrefabInstance:
     - target: {fileID: 3299512020571191127, guid: b1cb50cda8ca9964bb01fad592d8f93f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978921428413400176, guid: b1cb50cda8ca9964bb01fad592d8f93f, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978921428413400176, guid: b1cb50cda8ca9964bb01fad592d8f93f, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978921428413400176, guid: b1cb50cda8ca9964bb01fad592d8f93f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448636825604007270, guid: b1cb50cda8ca9964bb01fad592d8f93f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 425.2784
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448636825604007270, guid: b1cb50cda8ca9964bb01fad592d8f93f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 638.1025
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448636825604007270, guid: b1cb50cda8ca9964bb01fad592d8f93f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 230.70047
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448636825604007270, guid: b1cb50cda8ca9964bb01fad592d8f93f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 346.3654
       objectReference: {fileID: 0}
     - target: {fileID: 8371371173063933048, guid: b1cb50cda8ca9964bb01fad592d8f93f, type: 3}
       propertyPath: m_Name
