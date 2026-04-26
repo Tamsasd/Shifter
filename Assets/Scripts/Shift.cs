@@ -1,16 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Shift : MonoBehaviour
 {
     private HashSet<Character> shiftableCharacters = new();
     private GameManager gameManager;
-    
+    private ControlsUIManager CUM;
 
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        CUM = FindObjectOfType<ControlsUIManager>();
     }
 
     void Update()
@@ -48,6 +50,8 @@ public class Shift : MonoBehaviour
         {
             shiftableCharacters.Add(otherChar);
         }
+
+        CUM.shiftable = true;
     }
 
     private void OnTriggerExit(Collider other)
@@ -57,6 +61,11 @@ public class Shift : MonoBehaviour
         if (otherChar != null && otherChar.gameObject.CompareTag("Character"))
         {
             shiftableCharacters.Remove(otherChar);
+        }
+
+        if (shiftableCharacters.Count() == 0)
+        {
+            CUM.shiftable = false;
         }
     }
 }

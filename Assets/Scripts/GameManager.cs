@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject winCanvas;
     [SerializeField] private GameObject loseCanvas;
     [SerializeField] private GameObject controllsCanvas;
-    [SerializeField] private ControllsUIManager hudManager;
+    private ControlsUIManager CUM;
 
     private Pause pauseManager;
     private StopwatchTimer stopwatchTimer;
@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         winCanvas.SetActive(false);
         loseCanvas.SetActive(false);
         controllsCanvas.SetActive(true);
+        CUM = FindObjectOfType<ControlsUIManager>();
     }
 
     void Update()
@@ -83,7 +84,14 @@ public class GameManager : MonoBehaviour
             extra = "W, A, S, D, Q, E, Space: Quack";
         }
 
-        hudManager.SetHUD(
+        //if (mainCharacter == controlledObject)
+        //{
+        //    CUM.chicken = true;
+        //}
+
+        CUM.chicken = (mainCharacter == this.controlledObject);
+
+        CUM.SetHUD(
             moveScript.canMove,
             moveScript.canTurn,
             moveScript.canJump,
