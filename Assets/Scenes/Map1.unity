@@ -4298,13 +4298,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2468669084421509321, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.86
+      objectReference: {fileID: 0}
     - target: {fileID: 6347679525187428024, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
       propertyPath: m_Name
       value: Chicken
       objectReference: {fileID: 0}
     - target: {fileID: 8081271906428388219, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.114
+      value: 2.142
       objectReference: {fileID: 0}
     - target: {fileID: 8081271906428388219, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
       propertyPath: m_LocalPosition.y

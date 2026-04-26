@@ -27,7 +27,6 @@ public class PressurePlate : Interactable
     private void OnTriggerEnter(Collider other)
     {
         massOnButton += GetMass(other);
-        Debug.Log("mass: " + massOnButton); 
         if (!isActivated && massOnButton >= minimumMass)
         { 
             OnActivate();
