@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class CameraController : MonoBehaviour
 {
@@ -31,7 +32,10 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        Character controlledCharacter = gameManager.GetControlledObject().GetComponent<Character>();
+        Character controlledCharacter = gameManager.GetControlledObject();
+        if (controlledCharacter == null) return;
+
+        controlledCharacter = gameManager.GetControlledObject().GetComponent<Character>();
         transform.position = controlledCharacter.GetCameraPivot().position;
 
         HandleRotation();

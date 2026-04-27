@@ -136,17 +136,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7b7f1c683a10941ae23423368bd467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  rotationSpeed: 200
-  sphereRadius: 0.3
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  freezeRotation: 1
-  canTurn: 0
   canMove: 1
+  speed: 5
+  canTurn: 0
+  rotationSpeed: 200
+  freezeRotation: 1
   canJump: 0
   jumpForce: 50
+  groundCheckSphereRadius: 0.3
+  groundCheckOffset: {x: 0, y: 0, z: 0}
+  notGroundMask:
+    serializedVersion: 2
+    m_Bits: 8
+  extraHUDText: 
   flyForce: 100
   pivotSpeed: 10
   tiltAngle: 30
@@ -305,6 +307,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: ca13026e105d1ff4e87dc04bf67c7a0e, type: 3}
   cameraPivot: {fileID: 0}
   outlineLayerIndex: 1
+  extraHUDText: 'Space: fly'
 --- !u!65 &6146158730789651522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -377,6 +380,10 @@ PrefabInstance:
     - target: {fileID: 7951341293090900669, guid: 20dfb93b44026b74d90cf5fe51e29ec2, type: 3}
       propertyPath: m_Name
       value: Foam
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951341293090900669, guid: 20dfb93b44026b74d90cf5fe51e29ec2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,20 +12,22 @@ public abstract class AbstractMove : MonoBehaviour
     protected bool inControl = false;
 
     [Header("Moving")]
-    [SerializeField] protected bool canMove = true;
+    [SerializeField] public bool canMove = true;
     [SerializeField] protected float speed = 5f;
 
     [Header("Turning/Rotating")]
-    [SerializeField] protected bool canTurn = true;
+    [SerializeField] public bool canTurn = true;
     [SerializeField] protected float rotationSpeed = 200f;
     [SerializeField] protected bool freezeRotation = true;
 
     [Header("Jumping")]
-    [SerializeField] protected bool canJump = false;
+    [SerializeField] public bool canJump = false;
     [SerializeField] protected float jumpForce = 50.0f;
     [SerializeField] private float groundCheckSphereRadius = 0.3f;
     [SerializeField] private Vector3 groundCheckOffset = new Vector3(0, 0, 0);
     [SerializeField] private LayerMask notGroundMask;
+
+    public string extraHUDText = "";
 
     protected Transform cameraTransform;
 

@@ -4,8 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(AbstractMove))]
 public abstract class Character : MonoBehaviour
-{
-    public Transform GetCameraPivot()
+{    public Transform GetCameraPivot()
     {
         if (cameraPivot == null)
         {
