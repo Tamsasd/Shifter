@@ -20,7 +20,7 @@ public class LaserTurret : EffectedObject
 
     public override void OnValueChange(Interactable effector, float value)
     {
-        head.rotation = Quaternion.Euler(head.rotation.x, value, head.rotation.z);
+        head.localRotation = Quaternion.Euler(head.localRotation.x, value, head.localRotation.z);
     }
 
     public override void WhileActive(Interactable effector)

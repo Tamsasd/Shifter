@@ -102,7 +102,7 @@ AudioSource:
   m_GameObject: {fileID: 4830427370668359886}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5834892616041580961, guid: ac9b1558ee07efe49aa6b90e0850bf60, type: 2}
   m_audioClip: {fileID: 8300000, guid: e972b9ce03fb2104187d02823ec8eb9a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -265,17 +265,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  rotationSpeed: 200
-  sphereRadius: 0.3
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  freezeRotation: 1
-  canTurn: 0
   canMove: 0
+  speed: 5
+  canTurn: 0
+  rotationSpeed: 200
+  freezeRotation: 1
   canJump: 0
   jumpForce: 50
+  groundCheckSphereRadius: 0.3
+  groundCheckOffset: {x: 0, y: 0, z: 0}
+  notGroundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  extraHUDText: 
 --- !u!64 &8097777357473677684
 MeshCollider:
   m_ObjectHideFlags: 0

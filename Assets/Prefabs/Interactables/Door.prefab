@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 216292924936252644}
   - component: {fileID: 3938874590626786392}
   - component: {fileID: 3059073764913827684}
+  - component: {fileID: 4581305288838912639}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -106,6 +107,28 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7173674413208997415, guid: 3fb692b9567b9744e9f36315528e7f16, type: 3}
+--- !u!64 &4581305288838912639
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3546187213564007933}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7173674413208997415, guid: 3fb692b9567b9744e9f36315528e7f16, type: 3}
 --- !u!1 &6728221606504668075
