@@ -7895,9 +7895,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.86
       objectReference: {fileID: 0}
+    - target: {fileID: 4391432793660132707, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
+      propertyPath: m_Height
+      value: 0.49319145
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391432793660132707, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
+      propertyPath: m_Center.y
+      value: 0.21716537
+      objectReference: {fileID: 0}
     - target: {fileID: 6347679525187428024, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
       propertyPath: m_Name
       value: Chicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486254380544530244, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
+      propertyPath: m_Height
+      value: 0.4659108
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486254380544530244, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
+      propertyPath: m_Center.y
+      value: 0.23073167
       objectReference: {fileID: 0}
     - target: {fileID: 8081271906428388219, guid: dfd17e7bc8f74d04f8fb084da9747f57, type: 3}
       propertyPath: m_LocalPosition.x
