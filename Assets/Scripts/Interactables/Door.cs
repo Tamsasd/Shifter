@@ -8,7 +8,10 @@ public class Door : EffectedObject
 
     public override void OnActivate(Interactable effector)
     {
-        animator.SetTrigger("Open");
+        if (animator != null)
+        {
+            animator.SetTrigger("Open");
+        }
     }
 
     public override void OnDeactivate(Interactable effector)
@@ -26,15 +29,13 @@ public class Door : EffectedObject
         return;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (animator == null)
+        {
+            Debug.LogError($"Animator missing on {gameObject.name}!", this);
+        }
     }
 }

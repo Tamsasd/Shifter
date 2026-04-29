@@ -57,17 +57,25 @@ public class CameraController : MonoBehaviour
     void HandleZoom()
     {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        float effectiveSmoothTime = Mathf.Max(0.0001f, zoomSmoothTime);
 
         if (scrollInput != 0f)
         {
+
             targetZoomZ += scrollInput * zoomSens;
             targetZoomZ = Mathf.Clamp(targetZoomZ, minZoomZ, maxZoomZ);
         }
 
         float currentZ = cameraTransform.localPosition.z;
 
-        float newZ = Mathf.SmoothDamp(currentZ, targetZoomZ, ref zoomVelocity, zoomSmoothTime);
+        //float newZ = Mathf.SmoothDamp(currentZ, targetZoomZ, ref zoomVelocity, zoomSmoothTime);
+        float newZ = Mathf.SmoothDamp(currentZ, targetZoomZ, ref zoomVelocity, effectiveSmoothTime);
 
         cameraTransform.localPosition = new Vector3(0, 0, newZ);
+
+        if (!float.IsNaN(newZ))
+        {
+            cameraTransform.localPosition = new Vector3(0, 0, newZ);
+        }
     }
 }

@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5012655706131472025}
     m_Modifications:
+    - target: {fileID: 6979679661029708072, guid: 581f2fbf27ebbad4e95343b4d821d240, type: 3}
+      propertyPath: m_Size.y
+      value: 0.07871954
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979679661029708072, guid: 581f2fbf27ebbad4e95343b4d821d240, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0736172
+      objectReference: {fileID: 0}
     - target: {fileID: 7482850373316451006, guid: 581f2fbf27ebbad4e95343b4d821d240, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -185,17 +193,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  rotationSpeed: 200
-  sphereRadius: 0.3
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  freezeRotation: 1
-  canTurn: 1
   canMove: 1
+  speed: 8
+  canTurn: 1
+  rotationSpeed: 200
+  freezeRotation: 1
   canJump: 0
   jumpForce: 50
+  groundCheckSphereRadius: 0.3
+  groundCheckOffset: {x: 0, y: 0, z: 0}
+  notGroundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  extraHUDText: 
 --- !u!54 &1700170217788413214
 Rigidbody:
   m_ObjectHideFlags: 0
