@@ -2111,6 +2111,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: minimumMass
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: effectedObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: effectedObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 2646890757216106799}
     - target: {fileID: 8046343773483622914, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
       propertyPath: m_Name
       value: PressurePlateButton (1)
@@ -4885,6 +4897,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: minimumMass
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: effectedObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: effectedObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1080894008}
     - target: {fileID: 8046343773483622914, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
       propertyPath: m_Name
       value: PressurePlateButton (2)
@@ -4970,6 +4994,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: minimumMass
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: effectedObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: effectedObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 3888029187683283429}
     - target: {fileID: 8046343773483622914, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
       propertyPath: m_Name
       value: PressurePlateButton

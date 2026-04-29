@@ -1,41 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : EffectedObject
 {
     private Animator animator;
+    [SerializeField] private bool defaultState = false;
 
     public override void OnActivate(Interactable effector)
     {
-        if (animator != null)
-        {
-            animator.SetTrigger("Open");
-        }
+        animator.SetBool("Open", !defaultState);
     }
 
     public override void OnDeactivate(Interactable effector)
     {
-        animator.SetTrigger("Close");
+        animator.SetBool("Open", defaultState);
     }
 
-    public override void OnValueChange(Interactable effector, float value)
-    {
-        return;
-    }
-
-    public override void WhileActive(Interactable effector)
-    {
-        return;
-    }
+    public override void OnValueChange(Interactable effector, float value) { }
+    public override void WhileActive(Interactable effector) { }
 
     void Awake()
     {
         animator = GetComponent<Animator>();
-
-        if (animator == null)
-        {
-            Debug.LogError($"Animator missing on {gameObject.name}!", this);
-        }
+        if (animator == null) Debug.LogError($"Animator missing on {gameObject.name}!", this);
+        animator.SetBool("Open", defaultState);
     }
 }
