@@ -1165,6 +1165,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 300605816}
     m_Modifications:
+    - target: {fileID: 291383676910574708, guid: 070842fd305858e40a4b4fc54277fafb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1940005844820277196, guid: 070842fd305858e40a4b4fc54277fafb, type: 3}
       propertyPath: m_Name
       value: LaserTurret
@@ -3865,6 +3869,10 @@ PrefabInstance:
     - target: {fileID: 2822033520417560428, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
+      propertyPath: effectedObjects.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3199831215976947030, guid: 94af32de744e7a04ead6325fb4ad7d99, type: 3}
       propertyPath: effectedObjects.Array.data[0]

@@ -286,7 +286,7 @@ ReflectionProbe:
   m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 0
+  m_Mode: 1
   m_RefreshMode: 1
   m_TimeSlicingMode: 0
   m_Resolution: 512
@@ -465,17 +465,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef4dd970fc344c4b9cf420ac2214046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  rotationSpeed: 100
-  sphereRadius: 0.3
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  freezeRotation: 1
-  canTurn: 1
   canMove: 1
+  speed: 5
+  canTurn: 1
+  rotationSpeed: 100
+  freezeRotation: 1
   canJump: 0
   jumpForce: 50
+  groundCheckSphereRadius: 0.3
+  groundCheckOffset: {x: 0, y: 0, z: 0}
+  notGroundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  extraHUDText: 
 --- !u!54 &2500369550639207331
 Rigidbody:
   m_ObjectHideFlags: 0

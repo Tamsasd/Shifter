@@ -10,7 +10,7 @@ public class Laser : MonoBehaviour
     [SerializeField] private LayerMask hitLayers;
     private LineRenderer lineRenderer;
 
-    private void OnValidate()
+    private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.enabled = false;
